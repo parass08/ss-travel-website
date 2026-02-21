@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Travel | Katra, J&K</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f3ee;
+    color: #333;
+}
+header {
+    background: #7b1e1e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+header p {
+    margin-top: 10px;
+}
+section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+h2 {
+    color: #7b1e1e;
+}
+form {
+    display: grid;
+    gap: 15px;
+}
+input, select, textarea {
+    padding: 10px;
+    font-size: 14px;
+}
+button {
+    padding: 12px;
+    background: #d4af37;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>SS TRAVEL</h1>
+<p>20+ Years Trusted J&K Travel Specialist – Serving All India & NRI Clients</p>
+</header>
+
+<section>
+<h2>Plan Your Vaishno Devi & J&K Tour</h2>
+<p>Based in Katra, J&K. Complete arrangements for Vaishno Devi Yatra, Kashmir tours, hotel bookings, helicopter services, transport and ticketing.</p>
+</section>
+
+<section>
+<h2>Get Custom Travel Quote</h2>
+
+<form>
+<select id="destination">
+<option>Vaishno Devi</option>
+<option>Kashmir Tour</option>
+<option>Patnitop</option>
+<option>Custom Tour</option>
+</select>
+
+<input type="number" id="travellers" placeholder="Number of Travellers">
+
+<select id="hotel">
+<option>3 Star Hotel</option>
+<option>4 Star Hotel</option>
+<option>5 Star Hotel</option>
+</select>
+
+<select id="travelmode">
+<option>Helicopter</option>
+<option>Battery Car</option>
+<option>On Foot</option>
+<option>Car Rental</option>
+</select>
+
+<input type="date" id="date">
+
+<input type="text" id="pickup" placeholder="Pickup Location">
+
+<input type="tel" id="phone" placeholder="Your Contact Number">
+
+<input type="email" id="email" placeholder="Your Email">
+
+<textarea id="special" placeholder="Any Special Requirements"></textarea>
+
+<button type="button" class="whatsapp-btn" onclick="sendWhatsApp()">Get Quote on WhatsApp</button>
+
+</form>
+</section>
+
+<section>
+<h2>Why Choose SS Travel?</h2>
+<ul>
+<li>20+ Years Experience</li>
+<li>100+ NRI Tourists Served</li>
+<li>Official Helicopter Assistance</li>
+<li>Trusted Local Operator in Katra</li>
+<li>Complete End-to-End Arrangements</li>
+</ul>
+</section>
+
+<footer>
+<p>SS Travel | Katra, J&K</p>
+<p>Phone / WhatsApp: 9906901897</p>
+<p>Email: sskatra@gmail.com</p>
+</footer>
+
+<script>
+function sendWhatsApp() {
+var destination = document.getElementById("destination").value;
+var travellers = document.getElementById("travellers").value;
+var hotel = document.getElementById("hotel").value;
+var travelmode = document.getElementById("travelmode").value;
+var date = document.getElementById("date").value;
+var pickup = document.getElementById("pickup").value;
+var phone = document.getElementById("phone").value;
+var email = document.getElementById("email").value;
+var special = document.getElementById("special").value;
+
+var message = "Hello SS Travel,%0A%0AI want to plan a trip.%0A%0ADestination: " 
++ destination + "%0ATravellers: " 
++ travellers + "%0AHotel: " 
++ hotel + "%0ATravel Mode: " 
++ travelmode + "%0ADate: " 
++ date + "%0APickup: " 
++ pickup + "%0AMy Phone: " 
++ phone + "%0AMy Email: " 
++ email + "%0ASpecial Request: " 
++ special + "%0A%0APlease share details.";
+
+var url = "https://wa.me/919906901897?text=" + message;
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
