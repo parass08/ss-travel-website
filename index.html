@@ -540,7 +540,7 @@ gap: 0.3rem;
 
 /* ===== BOOKING FORM ===== */
 .booking-section {
-background: linear-gradient(170deg, #FFF5E8 0%, #FFECD0 50%, #FFF8F0 100%);
+background: linear-gradient(170deg, #2D0F00 0%, #1C0800 50%, #0D0400 100%);
 padding: 5rem 1.5rem;
 position: relative;
 overflow: hidden;
@@ -552,7 +552,7 @@ right: -2rem;
 top: 50%;
 transform: translateY(-50%);
 font-size: 25rem;
-color: rgba(255,107,0,0.04);
+color: rgba(255,107,0,0.08);
 font-family: serif;
 line-height: 1;
 pointer-events: none;
@@ -665,8 +665,8 @@ box-shadow: 0 0 0 3px rgba(255,107,0,0.15);
 display: inline-flex;
 align-items: center;
 gap: 0.4rem;
-background: rgba(255,255,255,0.06);
-border: 1.5px solid rgba(255,107,0,0.25);
+background: rgba(255,255,255,0.7);
+border: 1.5px solid rgba(255,107,0,0.35);
 border-radius: 30px;
 padding: 0.55rem 1.1rem;
 cursor: pointer;
@@ -675,7 +675,7 @@ user-select: none;
 }
 .pill:hover { border-color: var(–saffron-light); background: rgba(255,107,0,0.1); }
 .pill input[type=“checkbox”] { display: none; }
-.pill span { color: rgba(255,240,220,0.85); font-size: 0.9rem; white-space: nowrap; }
+.pill span { color: rgba(60,20,0,0.9); font-size: 0.85rem; white-space: nowrap; font-family: ‘Hind’, sans-serif; }
 .pill.selected {
 border-color: var(–saffron-light);
 background: rgba(255,107,0,0.2);
@@ -966,6 +966,26 @@ cursor: pointer;
 font-size: 1rem;
 z-index: 10;
 }
+/* Photo Slider */
+.photo-slider { position: relative; width: 100%; height: 240px; overflow: hidden; background: #000; }
+.slides { width: 100%; height: 100%; }
+.slide-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s ease; }
+.slide-img.active { opacity: 1; }
+.slider-btn {
+position: absolute; top: 50%; transform: translateY(-50%);
+background: rgba(0,0,0,0.5); color: #fff; border: none;
+width: 36px; height: 36px; border-radius: 50%; font-size: 1.4rem;
+cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
+}
+.slider-btn.prev { left: 0.5rem; }
+.slider-btn.next { right: 0.5rem; }
+.slider-dots { position: absolute; bottom: 0.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.2s; }
+.dot.active { background: #fff; }
+
+/* YouTube Video */
+.info-video-wrap { margin: 1.2rem 0 0; border-radius: 8px; overflow: hidden; }
+.info-video-wrap iframe { width: 100%; height: 200px; display: block; }
 .info-photo { width: 100%; height: 220px; object-fit: cover; display: block; }
 .info-body { padding: 1.5rem; }
 .info-tag { font-family: ‘Cinzel’, serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(–saffron); margin-bottom: 0.5rem; }
@@ -1172,14 +1192,31 @@ z-index: 10;
 <div class="info-modal" id="infoModal" onclick="closeInfo()">
   <div class="info-box" onclick="event.stopPropagation()">
     <button class="info-close" onclick="closeInfo()">✕</button>
-    <img class="info-photo" id="infoPhoto" src="" alt="">
-    <div class="info-body">
-      <div class="info-tag" id="infoTag"></div>
-      <h3 class="info-title" id="infoTitle"></h3>
-      <p class="info-desc" id="infoDesc"></p>
-      <div class="info-facts" id="infoFacts"></div>
-      <button class="btn-primary" onclick="closeInfo();document.getElementById('booking').scrollIntoView({behavior:'smooth'})" style="margin-top:1.2rem;font-size:0.8rem;">Plan This Trip</button>
-    </div>
+
+```
+<!-- Photo Slider -->
+<div class="photo-slider">
+  <div class="slides" id="photoSlider"></div>
+  <button class="slider-btn prev" onclick="prevSlide()">&#8249;</button>
+  <button class="slider-btn next" onclick="nextSlide()">&#8250;</button>
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<div class="info-body">
+  <div class="info-tag" id="infoTag"></div>
+  <h3 class="info-title" id="infoTitle"></h3>
+  <p class="info-desc" id="infoDesc"></p>
+  <div class="info-facts" id="infoFacts"></div>
+  
+  <!-- YouTube Video -->
+  <div class="info-video-wrap">
+    <iframe id="infoVideo" src="" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+  
+  <button class="btn-primary" onclick="closeInfo();document.getElementById('booking').scrollIntoView({behavior:'smooth'})" style="margin-top:1.2rem;font-size:0.8rem;width:100%;">Plan This Trip</button>
+</div>
+```
+
   </div>
 </div>
 
@@ -1199,65 +1236,64 @@ z-index: 10;
       </div>
       <form id="bookingForm">
         <div class="form-grid">
+          <div class="form-group">
+            <label>Your Full Name *</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp / Phone *</label>
+            <input type="tel" id="phone" placeholder="+91 XXXXXXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>Travelling From (City)</label>
+            <input type="text" id="fromCity" placeholder="e.g. Delhi, Mumbai...">
+          </div>
+          <div class="form-group">
+            <label>Travel Date *</label>
+            <input type="date" id="travelDate" required>
+          </div>
+          <div class="form-group">
+            <label>Number of Persons *</label>
+            <div class="select-wrap">
+              <select id="persons" required>
+                <option value="" disabled selected>Select persons</option>
+                <option>1 Person</option><option>2 Persons</option><option>3 Persons</option>
+                <option>4 Persons</option><option>5 Persons</option><option>6 Persons</option>
+                <option>7-10 Persons</option><option>11-20 Persons (Group)</option><option>20+ Persons (Large Group)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Number of Days</label>
+            <div class="select-wrap">
+              <select id="days">
+                <option value="" disabled selected>Select duration</option>
+                <option>1 Day</option><option>2 Days / 1 Night</option><option>3 Days / 2 Nights</option>
+                <option>4 Days / 3 Nights</option><option>5 Days / 4 Nights</option>
+                <option>6 Days / 5 Nights</option><option>7 Days / 6 Nights</option><option>More than 7 Days</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Budget Range (Optional)</label>
+            <div class="select-wrap">
+              <select id="budget">
+                <option value="" disabled selected>Select budget per person</option>
+                <option>Under Rs. 5,000</option>
+                <option>Rs. 5,000 – 10,000</option>
+                <option>Rs. 10,000 – 20,000</option>
+                <option>Rs. 20,000 – 50,000</option>
+                <option>Rs. 50,000+</option>
+                <option>No specific budget</option>
+              </select>
+            </div>
+          </div>
 
 ```
-      <div class="form-group">
-        <label>Your Full Name *</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label>WhatsApp / Phone *</label>
-        <input type="tel" id="phone" placeholder="+91 XXXXXXXXXX" required>
-      </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" id="email" placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label>Travelling From (City)</label>
-        <input type="text" id="fromCity" placeholder="e.g. Delhi, Mumbai...">
-      </div>
-      <div class="form-group">
-        <label>Travel Date *</label>
-        <input type="date" id="travelDate" required>
-      </div>
-      <div class="form-group">
-        <label>Number of Persons *</label>
-        <div class="select-wrap">
-          <select id="persons" required>
-            <option value="" disabled selected>Select persons</option>
-            <option>1 Person</option><option>2 Persons</option><option>3 Persons</option>
-            <option>4 Persons</option><option>5 Persons</option><option>6 Persons</option>
-            <option>7-10 Persons</option><option>11-20 Persons (Group)</option><option>20+ Persons (Large Group)</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Number of Days</label>
-        <div class="select-wrap">
-          <select id="days">
-            <option value="" disabled selected>Select duration</option>
-            <option>1 Day</option><option>2 Days / 1 Night</option><option>3 Days / 2 Nights</option>
-            <option>4 Days / 3 Nights</option><option>5 Days / 4 Nights</option>
-            <option>6 Days / 5 Nights</option><option>7 Days / 6 Nights</option><option>More than 7 Days</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Budget Range (Optional)</label>
-        <div class="select-wrap">
-          <select id="budget">
-            <option value="" disabled selected>Select budget per person</option>
-            <option>Under Rs. 5,000</option>
-            <option>Rs. 5,000 – 10,000</option>
-            <option>Rs. 10,000 – 20,000</option>
-            <option>Rs. 20,000 – 50,000</option>
-            <option>Rs. 50,000+</option>
-            <option>No specific budget</option>
-          </select>
-        </div>
-      </div>
-
       <div class="form-section-label">Services Required (Select all that apply) *</div>
       <div class="form-group full">
         <div class="pill-group">
@@ -1770,13 +1806,18 @@ function sendEmail() {
 
 
 // ============================
-// PLACE INFO MODAL
+// PLACE INFO MODAL - Enhanced with slider + video
 // ============================
 const placeData = {
   vaishno: {
     title: 'Mata Vaishno Devi',
     tag: 'Sacred Pilgrimage · Katra, J&K',
-    photo: 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=800&q=80',
+    photos: [
+      'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vaishno_Devi_Bhawan.jpg/800px-Vaishno_Devi_Bhawan.jpg',
+      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80'
+    ],
+    video: 'tVNBSB3GNUA',
     desc: 'One of the most revered Hindu shrines in India, Mata Vaishno Devi is nestled in the Trikuta mountains at 5,200 ft. Millions of devotees visit every year to seek the blessings of Mata Rani. The 14 km trek from Katra is a deeply spiritual experience. SS Travels arranges helicopter, battery car, pony, and palki options for all ages.',
     facts: [
       { label: 'Altitude', val: '5,200 ft' },
@@ -1790,8 +1831,13 @@ const placeData = {
   dal: {
     title: 'Dal Lake, Srinagar',
     tag: 'Heaven on Earth · Kashmir',
-    photo: 'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
-    desc: "Dal Lake is the jewel of Srinagar and one of India's most iconic destinations. Famous for its floating houseboats, Shikara rides at sunset, and the surrounding Mughal gardens. A stay on a houseboat on Dal Lake is an experience unlike anything else. The lake is surrounded by majestic Himalayan peaks on all sides.",
+    photos: [
+      'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
+      'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80',
+      'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80'
+    ],
+    video: 'YSonaE1LXGQ',
+    desc: "Dal Lake is the jewel of Srinagar and one of India's most iconic destinations. Famous for its floating houseboats, Shikara rides at sunset, and the surrounding Mughal gardens. A stay on a houseboat on Dal Lake is an experience unlike anything else.",
     facts: [
       { label: 'Location', val: 'Srinagar, Kashmir' },
       { label: 'Famous For', val: 'Houseboats & Shikara' },
@@ -1804,8 +1850,14 @@ const placeData = {
   gulmarg: {
     title: 'Gulmarg',
     tag: 'Snow Paradise · Kashmir',
-    photo: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80',
-    desc: "Gulmarg, meaning Meadow of Flowers, is one of the most beautiful hill stations in India. In winter it transforms into a stunning skiing destination with Asia's highest gondola ride. In summer it blooms with wildflowers and is perfect for horse riding and golf. A must-visit for any Kashmir trip.",    facts: [
+    photos: [
+      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80'
+    ],
+    video: 'vOcagsSmSo0',
+    desc: "Gulmarg, meaning Meadow of Flowers, is one of the most beautiful hill stations in India. In winter it transforms into a stunning skiing destination with Asia's highest gondola ride. In summer it blooms with wildflowers and is perfect for horse riding and golf.",
+    facts: [
       { label: 'Altitude', val: '2,650 m' },
       { label: 'Famous For', val: 'Skiing & Gondola Ride' },
       { label: 'Best Season', val: 'Dec–Mar (Snow), May–Sep (Flowers)' },
@@ -1817,8 +1869,13 @@ const placeData = {
   pangong: {
     title: 'Pangong Lake, Ladakh',
     tag: 'Blue Waters of Ladakh',
-    photo: 'https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=800&q=80',
-    desc: 'Pangong Tso is a breathtakingly beautiful high-altitude lake sitting at 4,350m, stretching 134 km from India into China. The lake changes colour from blue to green to red through the day — a sight that leaves every traveller speechless. Famous worldwide after the movie 3 Idiots was filmed here.',
+    photos: [
+      'https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80'
+    ],
+    video: 'fIX6T9SRc9M',
+    desc: 'Pangong Tso is a breathtakingly beautiful high-altitude lake at 4,350m, stretching 134 km from India into China. The lake changes colour from blue to green to red through the day. Famous worldwide after the movie 3 Idiots was filmed here.',
     facts: [
       { label: 'Altitude', val: '4,350 m' },
       { label: 'Length', val: '134 km (India to China)' },
@@ -1831,7 +1888,12 @@ const placeData = {
   pahalgam: {
     title: 'Pahalgam',
     tag: 'Valley of Shepherds · Kashmir',
-    photo: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80',
+    photos: [
+      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=80'
+    ],
+    video: 'DsWKRVoo7wQ',
     desc: 'Pahalgam is a scenic hill station on the banks of the Lidder River, surrounded by pine forests and snowy peaks. It serves as the base camp for the famous Amarnath Yatra. Known for its peaceful valleys, pony rides to Baisaran (Mini Switzerland), and the stunning Aru and Betab valleys.',
     facts: [
       { label: 'Altitude', val: '2,130 m' },
@@ -1845,8 +1907,14 @@ const placeData = {
   chardham: {
     title: 'Char Dham Yatra',
     tag: 'Sacred Pilgrimage · Uttarakhand',
-    photo: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80',
-    desc: 'The Char Dham Yatra is one of the holiest pilgrimages in Hinduism, visiting four sacred shrines in the Himalayas — Yamunotri, Gangotri, Kedarnath, and Badrinath. SS Travels arranges complete Char Dham packages including travel, accommodation, VIP darshan, and a dedicated guide throughout the journey.',
+    photos: [
+      'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Badrinath_Temple.jpg/800px-Badrinath_Temple.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Gangotri_Temple.jpg/800px-Gangotri_Temple.jpg'
+    ],
+    video: 'u9yDkgcx_jY',
+    desc: 'The Char Dham Yatra is one of the holiest pilgrimages in Hinduism — Yamunotri, Gangotri, Kedarnath, and Badrinath. SS Travels arranges complete packages including travel, accommodation, VIP darshan, and a dedicated guide throughout the journey.',
     facts: [
       { label: 'Four Dhams', val: 'Yamunotri, Gangotri, Kedarnath, Badrinath' },
       { label: 'Best Season', val: 'May–June & Sep–Oct' },
@@ -1858,22 +1926,61 @@ const placeData = {
   }
 };
 
+let currentSlide = 0;
+let currentPlace = null;
+
 function openInfo(key) {
   const d = placeData[key];
   if (!d) return;
-  document.getElementById('infoPhoto').src = d.photo;
+  currentPlace = d;
+  currentSlide = 0;
+  
+  // Set content
   document.getElementById('infoTag').textContent = d.tag;
   document.getElementById('infoTitle').textContent = d.title;
   document.getElementById('infoDesc').textContent = d.desc;
   document.getElementById('infoFacts').innerHTML = d.facts.map(f =>
-    `<div class="info-fact"><span class="info-fact-label">${f.label}</span><span class="info-fact-val">${f.val}</span></div>`
+    '<div class="info-fact"><span class="info-fact-label">' + f.label + '</span><span class="info-fact-val">' + f.val + '</span></div>'
   ).join('');
+  
+  // Build photo slider
+  const slider = document.getElementById('photoSlider');
+  slider.innerHTML = d.photos.map((p, i) =>
+    '<img src="' + p + '" class="slide-img' + (i === 0 ? ' active' : '') + '" alt="' + d.title + '" onerror="this.style.display='none'">'
+  ).join('');
+  
+  // Build dots
+  const dots = document.getElementById('sliderDots');
+  dots.innerHTML = d.photos.map((_, i) =>
+    '<span class="dot' + (i === 0 ? ' active' : '') + '" onclick="goToSlide(' + i + ')"></span>'
+  ).join('');
+  
+  // Set YouTube video
+  document.getElementById('infoVideo').src = 'https://www.youtube.com/embed/' + d.video + '?rel=0';
+  
   document.getElementById('infoModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+
+function goToSlide(n) {
+  if (!currentPlace) return;
+  const imgs = document.querySelectorAll('.slide-img');
+  const dots = document.querySelectorAll('.dot');
+  imgs.forEach(img => img.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  currentSlide = (n + currentPlace.photos.length) % currentPlace.photos.length;
+  if (imgs[currentSlide]) imgs[currentSlide].classList.add('active');
+  if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() { goToSlide(currentSlide + 1); }
+function prevSlide() { goToSlide(currentSlide - 1); }
+
 function closeInfo() {
   document.getElementById('infoModal').classList.remove('open');
+  document.getElementById('infoVideo').src = '';
   document.body.style.overflow = '';
+}
 }
 
 // Load reviews on start
