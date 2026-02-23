@@ -26,28 +26,10 @@
   body { font-family: ‘Hind’, sans-serif; background: var(–cream); color: var(–text); overflow-x: hidden; }
 
 /* ===== SCROLL ANIMATIONS ===== */
-.reveal {
-opacity: 0;
-transform: translateY(50px);
-transition: opacity 0.8s ease, transform 0.8s ease;
-}
-@media (prefers-reduced-motion: reduce) { .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; } }
-.reveal.visible {
+.reveal, .reveal-left, .reveal-right {
 opacity: 1;
-transform: translateY(0);
+transform: none;
 }
-.reveal-left {
-opacity: 0;
-transform: translateX(-50px);
-transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.reveal-left.visible { opacity: 1; transform: translateX(0); }
-.reveal-right {
-opacity: 0;
-transform: translateX(50px);
-transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.reveal-right.visible { opacity: 1; transform: translateX(0); }
 
 /* ===== FLOATING WHATSAPP ===== */
 .wa-float {
@@ -298,8 +280,8 @@ background: linear-gradient(90deg, var(–gold-light), transparent);
 
 .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
-background: linear-gradient(135deg, var(–saffron) 0%, var(–saffron-light) 100%);
-color: #fff;
+background: linear-gradient(135deg, #FF6B00 0%, #FF9A3C 100%) !important;
+color: #fff !important;
 font-family: ‘Cinzel’, serif;
 font-weight: 700;
 font-size: 0.85rem;
@@ -311,11 +293,12 @@ border-radius: 2px;
 transition: all 0.3s ease;
 box-shadow: 0 4px 25px rgba(255,107,0,0.4);
 border: none; cursor: pointer;
+-webkit-appearance: none;
 }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(255,107,0,0.6); }
 .btn-outline {
-background: transparent;
-color: var(–gold-light);
+background: transparent !important;
+color: #F0C040 !important;
 font-family: ‘Cinzel’, serif;
 font-weight: 600;
 font-size: 0.85rem;
@@ -324,9 +307,10 @@ text-transform: uppercase;
 padding: 1rem 2.2rem;
 text-decoration: none;
 border-radius: 2px;
-border: 1.5px solid rgba(212,160,23,0.6);
+border: 1.5px solid rgba(212,160,23,0.6) !important;
 transition: all 0.3s ease;
 cursor: pointer;
+-webkit-appearance: none;
 }
 .btn-outline:hover { background: rgba(212,160,23,0.1); border-color: var(–gold-light); transform: translateY(-3px); }
 
@@ -1532,27 +1516,9 @@ cursor: pointer; z-index: 10; display: flex; align-items: center; justify-conten
 const ADMIN_PASSWORD = 'sstravels2025';
 
 // ============================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL - simplified for Safari compatibility
 // ============================
-let observer;
-try {
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.05 });
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-    observer.observe(el);
-  });
-} catch(e) {
-  // Fallback: show all elements immediately
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-    el.classList.add('visible');
-  });
-  observer = { observe: function() {} };
-}
+let observer = { observe: function() {} };
 
 // ============================
 // ANIMATED COUNTERS
@@ -1986,12 +1952,7 @@ function closeInfo() {
 // Load reviews on start
 renderApprovedReviews();
 
-// Fallback: if viewing as local file, show all elements after short delay
-setTimeout(function() {
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) {
-    el.classList.add('visible');
-  });
-}, 300);
+// Animations simplified for Safari compatibility
 </script>
 
 </body>
