@@ -1,1958 +1,305 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS Travels – Vaishno Devi Yatra & Kashmir Packages | Katra</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>SS Travels – Vaishno Devi & Kashmir Packages | Katra</title>
+
+<meta name="description" content="SS Travels Katra offers Vaishno Devi Yatra packages, helicopter booking, Kashmir tours, Leh Ladakh trips and Char Dham Yatra. 24/7 WhatsApp support.">
+<meta name="keywords" content="Vaishno Devi package Katra, helicopter booking Vaishno Devi, Kashmir tour package, Leh Ladakh trip, Char Dham Yatra, travel agent in Katra">
+<meta name="author" content="SS Travels Katra">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --saffron: #FF6B00;
-  --saffron-light: #FF9A3C;
-  --saffron-pale: #FFF0E0;
-  --gold: #D4A017;
-  --gold-light: #F0C040;
-  --maroon: #7B1818;
-  --maroon-light: #A52020;
-  --cream: #FFFBF5;
-  --dark: #1C0A00;
-  --text: #3D1500;
-  --white: #FFFFFF;
+:root{
+--saffron:#FF6B00;
+--gold:#D4A017;
+--cream:#FFF8EE;
+--maroon:#7B1818;
+--text:#3D1500;
+--dark:#2A0E00;
 }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: ‘Hind’, sans-serif; background: var(–cream); color: var(–text); overflow-x: hidden; }
-
-/* ===== SCROLL ANIMATIONS ===== */
-.reveal, .reveal-left, .reveal-right {
-opacity: 1;
-transform: none;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Hind',sans-serif;
+background:var(--cream);
+color:var(--text);
+overflow-x:hidden;
 }
 
-/* ===== FLOATING WHATSAPP ===== */
-.wa-float {
-position: fixed;
-bottom: 2rem;
-right: 1.5rem;
-z-index: 999;
-display: flex;
-align-items: center;
-gap: 0.7rem;
-background: #25D366;
-color: #fff;
-padding: 0.85rem 1.3rem;
-border-radius: 50px;
-text-decoration: none;
-font-family: ‘Hind’, sans-serif;
-font-weight: 600;
-font-size: 0.95rem;
-box-shadow: 0 4px 25px rgba(37,211,102,0.5);
-animation: pulse-wa 2.5s ease-in-out infinite;
-transition: transform 0.2s;
-}
-.wa-float:hover { transform: scale(1.05); }
-@keyframes pulse-wa {
-0%, 100% { box-shadow: 0 4px 25px rgba(37,211,102,0.5); }
-50% { box-shadow: 0 4px 40px rgba(37,211,102,0.8), 0 0 0 8px rgba(37,211,102,0.15); }
-}
-.wa-float svg { flex-shrink: 0; }
-
-/* ===== NAV ===== */
-nav {
-position: fixed;
-top: 0; left: 0; right: 0;
-z-index: 200;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0.9rem 2rem;
-background: rgba(28,10,0,0.95);
-backdrop-filter: blur(12px);
-border-bottom: 1px solid rgba(212,160,23,0.25);
-}
-.nav-logo {
-font-family: ‘Cinzel Decorative’, serif;
-font-weight: 700;
-font-size: 1.1rem;
-color: var(–gold-light);
-letter-spacing: 0.05em;
-}
-.nav-logo span { color: var(–saffron-light); }
-.nav-links { display: flex; gap: 1.8rem; list-style: none; }
-.nav-links a {
-color: rgba(255,240,220,0.8);
-text-decoration: none;
-font-size: 0.82rem;
-letter-spacing: 0.1em;
-font-family: ‘Cinzel’, serif;
-text-transform: uppercase;
-transition: color 0.2s;
-}
-.nav-links a:hover { color: var(–saffron-light); }
-.nav-wa {
-background: #25D366;
-color: #fff !important;
-padding: 0.4rem 1rem;
-border-radius: 20px;
-font-size: 0.78rem !important;
+.topbar{
+background:var(--saffron);
+color:#fff;
+text-align:center;
+padding:8px;
+font-weight:600;
+font-size:14px;
 }
 
-/* ===== HERO ===== */
-.hero {
-position: relative;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-overflow: hidden;
-background: linear-gradient(175deg, #0A0300 0%, #1C0800 30%, #2D0F00 60%, #1A0500 100%);
+nav{
+background:#fff;
+padding:15px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:100;
 }
 
-/* Mandala background */
-.mandala-bg {
-position: absolute;
-inset: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-pointer-events: none;
-overflow: hidden;
-}
-.mandala-bg::before {
-content: ‘’;
-width: 700px;
-height: 700px;
-border-radius: 50%;
-border: 1px solid rgba(212,160,23,0.08);
-box-shadow:
-0 0 0 40px rgba(212,160,23,0.04),
-0 0 0 80px rgba(212,160,23,0.03),
-0 0 0 120px rgba(212,160,23,0.02),
-0 0 0 160px rgba(212,160,23,0.015),
-0 0 0 200px rgba(212,160,23,0.01);
-animation: rotateSlow 40s linear infinite;
-}
-@keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-.hero-glow {
-position: absolute;
-inset: 0;
-background:
-radial-gradient(ellipse 60% 50% at 50% 40%, rgba(255,107,0,0.12) 0%, transparent 60%),
-radial-gradient(ellipse 40% 30% at 50% 20%, rgba(212,160,23,0.15) 0%, transparent 50%);
+.logo{
+font-family:'Cinzel',serif;
+font-weight:700;
+font-size:20px;
+color:var(--maroon);
 }
 
-.diyas {
-position: absolute;
-inset: 0;
-background-image:
-radial-gradient(2px 2px at 15% 20%, rgba(255,150,50,0.9) 0%, transparent 100%),
-radial-gradient(1.5px 1.5px at 30% 10%, rgba(255,200,80,0.7) 0%, transparent 100%),
-radial-gradient(2px 2px at 70% 15%, rgba(255,150,50,0.8) 0%, transparent 100%),
-radial-gradient(1.5px 1.5px at 85% 25%, rgba(255,200,80,0.6) 0%, transparent 100%),
-radial-gradient(1px 1px at 50% 8%, rgba(255,220,100,0.7) 0%, transparent 100%),
-radial-gradient(1.5px 1.5px at 10% 60%, rgba(255,150,50,0.5) 0%, transparent 100%),
-radial-gradient(1px 1px at 90% 70%, rgba(255,200,80,0.5) 0%, transparent 100%),
-radial-gradient(2px 2px at 20% 80%, rgba(255,150,50,0.4) 0%, transparent 100%),
-radial-gradient(1px 1px at 75% 85%, rgba(255,200,80,0.4) 0%, transparent 100%);
-animation: flicker 4s ease-in-out infinite alternate;
-}
-@keyframes flicker {
-0% { opacity: 0.7; }
-25% { opacity: 1; }
-50% { opacity: 0.8; }
-75% { opacity: 1; }
-100% { opacity: 0.75; }
+nav a{
+text-decoration:none;
+color:var(--text);
+margin-left:20px;
+font-weight:500;
 }
 
-/* Mountain silhouette */
-.hero-mountain {
-position: absolute;
-bottom: 0; left: 0; right: 0;
-height: 50%;
-}
-.hero-mountain svg { width: 100%; height: 100%; }
-
-.hero-content {
-position: relative;
-z-index: 10;
-padding: 2rem;
+.hero{
+padding:90px 20px 80px;
+text-align:center;
+background:linear-gradient(180deg,#fff 0%,#FFF3E5 100%);
 }
 
-.om-container {
-position: relative;
-display: inline-block;
-margin-bottom: 1rem;
-}
-.om-ring {
-position: absolute;
-inset: -20px;
-border-radius: 50%;
-border: 1px solid rgba(212,160,23,0.3);
-animation: expandRing 3s ease-in-out infinite;
-}
-.om-ring-2 {
-position: absolute;
-inset: -35px;
-border-radius: 50%;
-border: 1px solid rgba(255,107,0,0.15);
-animation: expandRing 3s ease-in-out infinite 0.5s;
-}
-@keyframes expandRing {
-0%, 100% { transform: scale(1); opacity: 0.8; }
-50% { transform: scale(1.1); opacity: 0.3; }
-}
-.om-symbol {
-font-size: 4rem;
-color: var(–gold-light);
-display: block;
-text-shadow:
-0 0 20px rgba(212,160,23,0.8),
-0 0 60px rgba(255,107,0,0.4);
-animation: omGlow 3s ease-in-out infinite alternate;
-}
-@keyframes omGlow {
-from { text-shadow: 0 0 20px rgba(212,160,23,0.8), 0 0 40px rgba(255,107,0,0.3); }
-to { text-shadow: 0 0 40px rgba(212,160,23,1), 0 0 80px rgba(255,107,0,0.6), 0 0 120px rgba(255,150,0,0.3); }
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:42px;
+color:var(--maroon);
+margin-bottom:15px;
 }
 
-.hero-eyebrow {
-font-family: ‘Cinzel’, serif;
-font-size: 0.75rem;
-letter-spacing: 0.4em;
-color: var(–saffron-light);
-text-transform: uppercase;
-margin-bottom: 0.8rem;
+.hero p{
+font-size:18px;
+max-width:650px;
+margin:auto;
+margin-bottom:25px;
 }
 
-.hero h1 {
-font-family: ‘Cinzel Decorative’, serif;
-font-size: clamp(2.2rem, 6vw, 4.8rem);
-font-weight: 900;
-color: #fff;
-line-height: 1.15;
-margin-bottom: 0.3rem;
-text-shadow: 0 2px 20px rgba(0,0,0,0.5);
-}
-.hero h1 .gold { color: var(–gold-light); }
-.hero h1 .saffron { color: var(–saffron-light); }
-
-.hero-sub {
-font-size: clamp(1rem, 2vw, 1.3rem);
-color: rgba(255,240,220,0.8);
-font-style: italic;
-margin: 1rem 0 0.4rem;
-font-family: ‘Hind’, sans-serif;
-font-weight: 300;
-letter-spacing: 0.05em;
-}
-.hero-loc {
-font-family: ‘Cinzel’, serif;
-font-size: 0.85rem;
-color: var(–saffron-light);
-letter-spacing: 0.25em;
-text-transform: uppercase;
-margin-bottom: 2rem;
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:var(--saffron);
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+margin:8px;
 }
 
-.divider-sacred {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1rem;
-margin: 1.2rem auto;
-width: 300px;
-}
-.divider-sacred::before, .divider-sacred::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(–gold-light));
-}
-.divider-sacred::after {
-background: linear-gradient(90deg, var(–gold-light), transparent);
-}
-.divider-sacred span { color: var(–saffron-light); font-size: 1.2rem; }
-
-.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.btn-primary {
-background: linear-gradient(135deg, #FF6B00 0%, #FF9A3C 100%) !important;
-color: #fff !important;
-font-family: ‘Cinzel’, serif;
-font-weight: 700;
-font-size: 0.85rem;
-letter-spacing: 0.15em;
-text-transform: uppercase;
-padding: 1rem 2.2rem;
-text-decoration: none;
-border-radius: 2px;
-transition: all 0.3s ease;
-box-shadow: 0 4px 25px rgba(255,107,0,0.4);
-border: none; cursor: pointer;
--webkit-appearance: none;
-}
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(255,107,0,0.6); }
-.btn-outline {
-background: transparent !important;
-color: #F0C040 !important;
-font-family: ‘Cinzel’, serif;
-font-weight: 600;
-font-size: 0.85rem;
-letter-spacing: 0.15em;
-text-transform: uppercase;
-padding: 1rem 2.2rem;
-text-decoration: none;
-border-radius: 2px;
-border: 1.5px solid rgba(212,160,23,0.6) !important;
-transition: all 0.3s ease;
-cursor: pointer;
--webkit-appearance: none;
-}
-.btn-outline:hover { background: rgba(212,160,23,0.1); border-color: var(–gold-light); transform: translateY(-3px); }
-
-/* scroll indicator */
-.scroll-hint {
-position: absolute;
-bottom: 2rem;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0.4rem;
-color: rgba(255,240,220,0.4);
-font-size: 0.7rem;
-letter-spacing: 0.2em;
-font-family: ‘Cinzel’, serif;
-animation: bounce 2s ease-in-out infinite;
-}
-@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
-.scroll-hint svg { opacity: 0.4; }
-
-/* ===== SECTION COMMON ===== */
-.section-tag {
-font-family: ‘Cinzel’, serif;
-font-size: 0.7rem;
-letter-spacing: 0.4em;
-text-transform: uppercase;
-color: var(–saffron);
-margin-bottom: 0.7rem;
-display: block;
-}
-.section-title {
-font-family: ‘Cinzel Decorative’, serif;
-font-size: clamp(1.6rem, 4vw, 2.5rem);
-font-weight: 700;
-line-height: 1.2;
-margin-bottom: 1rem;
-}
-.section-desc {
-font-size: 1.05rem;
-line-height: 1.8;
-color: #6B3A1A;
-max-width: 600px;
-margin: 0 auto;
+.section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-/* ===== STATS BAR ===== */
-.stats-bar {
-background: linear-gradient(135deg, var(–maroon) 0%, var(–maroon-light) 50%, var(–maroon) 100%);
-padding: 2.5rem 1.5rem;
-display: flex;
-justify-content: center;
-gap: 0;
-flex-wrap: wrap;
-}
-.stat-item {
-text-align: center;
-padding: 1rem 3rem;
-border-right: 1px solid rgba(255,255,255,0.15);
-flex: 1;
-min-width: 150px;
-}
-.stat-item:last-child { border-right: none; }
-.stat-num {
-font-family: ‘Cinzel Decorative’, serif;
-font-size: 2.5rem;
-font-weight: 900;
-color: var(–gold-light);
-display: block;
-line-height: 1;
-}
-.stat-label {
-font-size: 0.8rem;
-color: rgba(255,240,220,0.75);
-letter-spacing: 0.15em;
-text-transform: uppercase;
-font-family: ‘Cinzel’, serif;
-margin-top: 0.4rem;
-display: block;
+.section h2{
+font-family:'Cinzel',serif;
+text-align:center;
+margin-bottom:40px;
+color:var(--maroon);
 }
 
-/* ===== SERVICES ===== */
-.services-section {
-background: var(–cream);
-padding: 5rem 1.5rem;
-text-align: center;
-}
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 1.2rem;
-max-width: 1100px;
-margin: 3rem auto 0;
-}
-.service-card {
-background: #fff;
-border: 1px solid rgba(255,107,0,0.15);
-border-radius: 8px;
-padding: 2rem 1.2rem;
-text-align: center;
-transition: all 0.35s ease;
-position: relative;
-overflow: hidden;
-cursor: default;
-}
-.service-card::after {
-content: ‘’;
-position: absolute;
-bottom: 0; left: 0; right: 0;
-height: 3px;
-background: linear-gradient(90deg, var(–saffron), var(–gold-light));
-transform: scaleX(0);
-transition: transform 0.3s ease;
-transform-origin: left;
-}
-.service-card:hover {
-transform: translateY(-6px);
-box-shadow: 0 12px 40px rgba(255,107,0,0.12);
-border-color: rgba(255,107,0,0.3);
-}
-.service-card:hover::after { transform: scaleX(1); }
-.service-icon { font-size: 2.8rem; display: block; margin-bottom: 0.8rem; }
-.service-card h3 {
-font-family: ‘Cinzel’, serif;
-font-size: 0.9rem;
-font-weight: 600;
-color: var(–maroon);
-margin-bottom: 0.5rem;
-letter-spacing: 0.05em;
-}
-.service-card p { font-size: 0.9rem; color: #7A4A2A; line-height: 1.6; }
-
-/* ===== GALLERY ===== */
-.gallery-section {
-background: linear-gradient(180deg, #1C0800 0%, #0D0400 100%);
-padding: 5rem 1.5rem;
-text-align: center;
-}
-.gallery-section .section-title { color: #fff; }
-.gallery-section .section-desc { color: rgba(255,240,220,0.65); }
-
-.gallery-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: auto;
-gap: 0.8rem;
-max-width: 1000px;
-margin: 3rem auto 0;
-}
-.gallery-item {
-border-radius: 6px;
-overflow: hidden;
-position: relative;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.gallery-item:hover { transform: scale(1.02); z-index: 1; }
-.gallery-item.tall { grid-row: span 2; }
-.gallery-item.wide { grid-column: span 2; }
-
-.gallery-img {
-width: 100%;
-height: 100%;
-min-height: 180px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 3.5rem;
-position: relative;
-overflow: hidden;
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
-/* Beautiful gradient placeholders representing real places */
-.g1 { background: linear-gradient(135deg, #8B4513 0%, #D2691E 30%, #FF8C00 60%, #FFD700 100%); min-height: 280px; }
-.g2 { background: linear-gradient(135deg, #1a3a5c 0%, #2E8B57 40%, #98FB98 100%); }
-.g3 { background: linear-gradient(135deg, #4B0082 0%, #8B008B 30%, #FF69B4 70%, #FFB6C1 100%); }
-.g4 { background: linear-gradient(135deg, #006994 0%, #0099CC 40%, #87CEEB 80%, #E0F0FF 100%); min-height: 280px; }
-.g5 { background: linear-gradient(135deg, #2F4F4F 0%, #556B2F 40%, #8FBC8F 80%, #F0FFF0 100%); }
-.g6 { background: linear-gradient(135deg, #8B0000 0%, #DC143C 40%, #FF6347 80%, #FFA07A 100%); }
-
-.gallery-img-overlay {
-position: absolute;
-inset: 0;
-background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.75) 100%);
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-padding: 1rem;
-text-align: left;
-}
-.gallery-place {
-font-family: ‘Cinzel’, serif;
-font-size: 0.85rem;
-font-weight: 600;
-color: #fff;
-letter-spacing: 0.08em;
-}
-.gallery-desc { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
-
-/* Gallery emoji art */
-.gallery-art {
-position: absolute;
-inset: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 0.3rem;
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-/* ===== BOOKING FORM ===== */
-.booking-section {
-background: linear-gradient(170deg, #2D0F00 0%, #1C0800 50%, #0D0400 100%);
-padding: 5rem 1.5rem;
-position: relative;
-overflow: hidden;
-}
-.booking-section::before {
-content: ‘ॐ’;
-position: absolute;
-right: -2rem;
-top: 50%;
-transform: translateY(-50%);
-font-size: 25rem;
-color: rgba(255,107,0,0.08);
-font-family: serif;
-line-height: 1;
-pointer-events: none;
+.card h3{
+margin-bottom:10px;
+color:var(--maroon);
+font-family:'Cinzel',serif;
 }
 
-.booking-inner {
-max-width: 850px;
-margin: 0 auto;
-background: var(–dark);
-border-radius: 12px;
-overflow: hidden;
-box-shadow: 0 20px 80px rgba(28,10,0,0.25);
+.destinations{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.booking-header {
-background: linear-gradient(135deg, var(–maroon) 0%, var(–maroon-light) 100%);
-padding: 2rem;
-text-align: center;
-position: relative;
-overflow: hidden;
-}
-.booking-header::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(212,160,23,0.15) 0%, transparent 70%);
-}
-.booking-header h2 {
-font-family: ‘Cinzel Decorative’, serif;
-font-size: clamp(1.3rem, 3vw, 2rem);
-color: #fff;
-position: relative;
-}
-.booking-header p {
-color: rgba(255,240,220,0.75);
-font-size: 0.95rem;
-margin-top: 0.5rem;
-position: relative;
-}
-.booking-header .om-small {
-font-size: 1.8rem;
-color: var(–gold-light);
-display: block;
-margin-bottom: 0.5rem;
+.dest{
+background:#fff;
+padding:25px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-.booking-body { padding: 2rem; }
-
-.no-price-notice {
-background: rgba(255,107,0,0.1);
-border: 1px solid rgba(255,107,0,0.3);
-border-radius: 8px;
-padding: 0.9rem 1.2rem;
-display: flex;
-align-items: center;
-gap: 0.8rem;
-margin-bottom: 1.8rem;
-}
-.no-price-notice p { color: rgba(255,240,220,0.85); font-size: 0.95rem; line-height: 1.5; }
-.no-price-notice strong { color: var(–saffron-light); }
-
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-.form-group.full { grid-column: 1 / -1; }
-
-.form-group label {
-font-family: ‘Cinzel’, serif;
-font-size: 0.68rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–saffron-light);
-font-weight: 600;
+.dest:hover{
+background:#FFF3E5;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-background: rgba(255,255,255,0.07);
-border: 1.5px solid rgba(255,107,0,0.3);
-border-radius: 6px;
-padding: 0.85rem 1rem;
-color: #fff;
-font-family: ‘Hind’, sans-serif;
-font-size: 1rem;
-transition: all 0.2s ease;
-appearance: none;
--webkit-appearance: none;
-}
-.form-group input::placeholder { color: rgba(255,240,220,0.35); }
-.form-group select option { background: #2D0F00; color: #fff; }
-.form-group input[type=“date”] { color-scheme: dark; }
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-outline: none;
-border-color: var(–saffron-light);
-background: rgba(255,255,255,0.1);
-box-shadow: 0 0 0 3px rgba(255,107,0,0.15);
-}
-.form-group textarea { resize: vertical; min-height: 90px; }
-
-/* Select arrow */
-.select-wrap { position: relative; }
-.select-wrap::after { content: ‘▾’; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(–saffron-light); pointer-events: none; }
-.select-wrap select { width: 100%; padding-right: 2.5rem; }
-
-/* Tap pill buttons */
-.pill-group { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.2rem; }
-.pill {
-display: inline-flex;
-align-items: center;
-gap: 0.4rem;
-background: rgba(255,255,255,0.7);
-border: 1.5px solid rgba(255,107,0,0.35);
-border-radius: 30px;
-padding: 0.55rem 1.1rem;
-cursor: pointer;
-transition: all 0.2s;
-user-select: none;
-}
-.pill:hover { border-color: var(–saffron-light); background: rgba(255,107,0,0.1); }
-.pill input[type=“checkbox”] { display: none; }
-.pill span { color: rgba(60,20,0,0.9); font-size: 0.85rem; white-space: nowrap; font-family: ‘Hind’, sans-serif; }
-.pill.selected {
-border-color: var(–saffron-light);
-background: rgba(255,107,0,0.2);
-box-shadow: 0 0 0 2px rgba(255,107,0,0.2);
-}
-.pill.selected span { color: var(–saffron-light); font-weight: 600; }
-
-/* Section label inside form */
-.form-section-label {
-font-family: ‘Cinzel’, serif;
-font-size: 0.65rem;
-letter-spacing: 0.3em;
-color: rgba(255,107,0,0.6);
-text-transform: uppercase;
-grid-column: 1 / -1;
-padding-top: 0.8rem;
-border-top: 1px solid rgba(255,107,0,0.1);
-margin-top: 0.4rem;
+.booking{
+background:#fff;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* Submit buttons */
-.submit-row { display: flex; gap: 1rem; margin-top: 1.8rem; flex-wrap: wrap; }
-.btn-wa {
-flex: 1; min-width: 200px;
-background: #25D366; color: #fff;
-border: none; padding: 1rem 1.5rem;
-font-family: ‘Cinzel’, serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-cursor: pointer; border-radius: 6px;
-display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-transition: all 0.3s ease;
-}
-.btn-wa:hover { background: #20c25c; transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
-.btn-mail {
-flex: 1; min-width: 200px;
-background: transparent; color: var(–gold-light);
-border: 1.5px solid rgba(212,160,23,0.5);
-padding: 1rem 1.5rem;
-font-family: ‘Cinzel’, serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-cursor: pointer; border-radius: 6px;
-display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-transition: all 0.3s ease;
-}
-.btn-mail:hover { background: rgba(212,160,23,0.1); border-color: var(–gold-light); transform: translateY(-2px); }
-.success-msg {
-display: none; background: rgba(37,211,102,0.1); border: 1px solid #25D366;
-border-radius: 6px; padding: 1rem; text-align: center; color: #5dffA0; font-size: 1rem; margin-top: 1rem;
+input,textarea,select{
+width:100%;
+padding:12px;
+margin-top:6px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ddd;
 }
 
-/* ===== REVIEWS ===== */
-.reviews-section {
-background: var(–cream);
-padding: 5rem 1.5rem;
-text-align: center;
-}
-.reviews-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-gap: 1.5rem;
-max-width: 1100px;
-margin: 3rem auto 2.5rem;
-}
-.review-card {
-background: #fff;
-border: 1px solid rgba(255,107,0,0.12);
-border-radius: 10px;
-padding: 1.8rem;
-position: relative;
-transition: all 0.3s;
-text-align: left;
-}
-.review-card:hover { box-shadow: 0 10px 40px rgba(255,107,0,0.1); transform: translateY(-4px); }
-.review-card::before {
-content: ‘”’;
-position: absolute;
-top: 0.5rem; left: 1rem;
-font-size: 5rem; color: rgba(255,107,0,0.08);
-font-family: Georgia, serif; line-height: 1;
-}
-.review-stars { color: #FF8C00; font-size: 1rem; margin-bottom: 0.7rem; }
-.review-text { font-size: 0.98rem; color: #5A3010; line-height: 1.75; margin-bottom: 1rem; font-style: italic; }
-.review-author { display: flex; align-items: center; gap: 0.8rem; }
-.review-avatar {
-width: 44px; height: 44px; border-radius: 50%;
-border: 2px solid var(–saffron-light);
-background: var(–saffron-pale);
-display: flex; align-items: center; justify-content: center;
-font-family: ‘Cinzel’, serif; font-weight: 700; color: var(–maroon); font-size: 0.9rem;
-flex-shrink: 0; overflow: hidden;
-}
-.review-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.review-name { font-family: ‘Cinzel’, serif; font-size: 0.85rem; font-weight: 600; color: var(–maroon); }
-.review-meta { font-size: 0.78rem; color: #AA7050; margin-top: 0.15rem; }
-
-/* Review form */
-.review-form-box {
-max-width: 700px; margin: 0 auto;
-background: #fff; border: 1px solid rgba(255,107,0,0.15);
-border-radius: 10px; padding: 2.5rem;
-box-shadow: 0 4px 30px rgba(255,107,0,0.06);
-}
-.review-form-box h3 { font-family: ‘Cinzel Decorative’, serif; font-size: 1.2rem; color: var(–maroon); margin-bottom: 1.5rem; text-align: center; }
-.rf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.rf-grid .full { grid-column: 1 / -1; }
-.review-form-box label { font-family: ‘Cinzel’, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(–saffron); display: block; margin-bottom: 0.35rem; font-weight: 600; }
-.review-form-box input, .review-form-box select, .review-form-box textarea {
-width: 100%; background: #FFF8F2; border: 1.5px solid rgba(255,107,0,0.2);
-border-radius: 6px; padding: 0.75rem 1rem; color: var(–text);
-font-family: ‘Hind’, sans-serif; font-size: 1rem; transition: all 0.2s; appearance: none;
-}
-.review-form-box input:focus, .review-form-box select:focus, .review-form-box textarea:focus {
-outline: none; border-color: var(–saffron); box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
-}
-.review-form-box textarea { resize: vertical; min-height: 100px; }
-
-.star-rating { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; }
-.star-rating span { font-size: 2rem; cursor: pointer; color: #ddd; transition: color 0.15s; }
-.star-rating span.active { color: #FF8C00; }
-
-.photo-upload-label {
-display: flex; align-items: center; gap: 0.6rem;
-background: #FFF8F2; border: 1.5px dashed rgba(255,107,0,0.3);
-border-radius: 6px; padding: 0.8rem 1rem; cursor: pointer;
-color: var(–saffron); font-family: ‘Cinzel’, serif; font-size: 0.72rem; letter-spacing: 0.1em;
-transition: all 0.2s;
-}
-.photo-upload-label:hover { border-color: var(–saffron); background: rgba(255,107,0,0.04); }
-#reviewPhoto { display: none; }
-#photoPreview { display: none; width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(–saffron-light); margin-top: 0.5rem; }
-
-.btn-submit-review {
-width: 100%; margin-top: 1.2rem;
-background: linear-gradient(135deg, var(–maroon) 0%, var(–maroon-light) 100%);
-color: #fff; border: none; padding: 1rem;
-font-family: ‘Cinzel’, serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-cursor: pointer; border-radius: 6px; transition: all 0.3s;
-box-shadow: 0 4px 15px rgba(123,24,24,0.3);
-}
-.btn-submit-review:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(123,24,24,0.5); }
-.review-success {
-display: none; background: rgba(37,211,102,0.08); border: 1px solid #25D366;
-border-radius: 6px; padding: 1rem; text-align: center; color: #1a7a3a; font-size: 1rem; margin-top: 1rem;
+footer{
+background:var(--dark);
+color:#fff;
+text-align:center;
+padding:30px 20px;
+margin-top:50px;
 }
 
-/* ===== ABOUT ===== */
-.about-section {
-background: linear-gradient(135deg, var(–maroon) 0%, #5A1010 50%, var(–maroon) 100%);
-padding: 5rem 1.5rem;
-text-align: center;
-position: relative;
-overflow: hidden;
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
-.about-section::before {
-content: ‘’;
-position: absolute; inset: 0;
-background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,160,23,0.1) 0%, transparent 70%);
-}
-.about-inner { max-width: 750px; margin: 0 auto; position: relative; }
-.about-section .section-title { color: #fff; }
-.about-section .section-tag { color: var(–gold-light); }
-.about-inner p { font-size: 1.1rem; line-height: 1.9; color: rgba(255,240,220,0.8); margin-bottom: 1.2rem; }
-
-.highlights {
-display: flex; justify-content: center; gap: 0; flex-wrap: wrap;
-margin-top: 3rem; padding-top: 2.5rem;
-border-top: 1px solid rgba(212,160,23,0.2);
-}
-.hl-item { text-align: center; padding: 1rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.1); flex: 1; min-width: 120px; }
-.hl-item:last-child { border-right: none; }
-.hl-num { font-family: ‘Cinzel Decorative’, serif; font-size: 2.2rem; font-weight: 900; color: var(–gold-light); line-height: 1; display: block; }
-.hl-label { font-size: 0.75rem; color: rgba(255,240,220,0.6); letter-spacing: 0.15em; text-transform: uppercase; font-family: ‘Cinzel’, serif; margin-top: 0.4rem; display: block; }
-
-/* ===== CONTACT ===== */
-.contact-section {
-background: var(–dark);
-padding: 4rem 1.5rem;
-text-align: center;
-}
-.contact-section h2 { font-family: ‘Cinzel Decorative’, serif; font-size: 1.8rem; color: var(–gold-light); margin-bottom: 0.5rem; }
-.contact-section p { color: rgba(255,240,220,0.55); font-size: 1rem; margin-bottom: 2rem; }
-.contact-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
-.contact-link {
-display: inline-flex; align-items: center; gap: 0.6rem;
-color: rgba(255,240,220,0.85); font-family: ‘Cinzel’, serif; font-size: 0.85rem;
-letter-spacing: 0.08em; text-decoration: none;
-padding: 0.8rem 1.8rem; border: 1px solid rgba(255,107,0,0.3); border-radius: 6px;
-transition: all 0.2s;
-}
-.contact-link:hover { background: rgba(255,107,0,0.1); border-color: var(–saffron-light); color: var(–saffron-light); }
-
-/* ===== FOOTER ===== */
-footer {
-background: #080300;
-text-align: center;
-padding: 1.5rem;
-color: rgba(255,240,220,0.25);
-font-size: 0.8rem;
-border-top: 1px solid rgba(255,107,0,0.08);
-}
-footer span { color: var(–saffron-light); }
-.admin-trigger { color: rgba(255,240,220,0.08); text-decoration: none; font-size: 0.65rem; cursor: pointer; }
-.admin-trigger:hover { color: rgba(255,240,220,0.2); }
-
-/* ===== ADMIN PANEL ===== */
-.admin-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); z-index: 1000; overflow-y: auto; padding: 2rem 1rem; }
-.admin-box { max-width: 900px; margin: 0 auto; background: #1C0800; border: 1px solid var(–saffron); border-radius: 8px; overflow: hidden; }
-.admin-header { background: linear-gradient(135deg, var(–maroon), var(–maroon-light)); padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-.admin-header h2 { font-family: ‘Cinzel’, serif; color: #fff; font-size: 1.1rem; }
-.admin-close { background: none; border: none; cursor: pointer; color: #fff; font-size: 1.5rem; font-weight: bold; }
-.admin-login { padding: 2rem; text-align: center; }
-.admin-login input { background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,107,0,0.3); border-radius: 6px; padding: 0.8rem 1rem; color: #fff; font-size: 1rem; width: 100%; max-width: 300px; display: block; margin: 0 auto 1rem; }
-.admin-login button { background: var(–saffron); color: #fff; border: none; padding: 0.8rem 2rem; font-family: ‘Cinzel’, serif; font-weight: 700; cursor: pointer; border-radius: 6px; letter-spacing: 0.1em; }
-.admin-content { padding: 1.5rem; }
-.pending-review { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,107,0,0.2); border-radius: 6px; padding: 1.2rem; margin-bottom: 1rem; }
-.pending-review .rev-name { font-family: ‘Cinzel’, serif; color: var(–saffron-light); font-size: 0.9rem; margin-bottom: 0.3rem; }
-.pending-review .rev-text { color: rgba(255,240,220,0.8); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.8rem; }
-.pending-review .rev-meta { font-size: 0.8rem; color: rgba(255,240,220,0.4); margin-bottom: 0.8rem; }
-.rev-actions { display: flex; gap: 0.8rem; }
-.btn-approve { background: #25D366; color: #fff; border: none; padding: 0.5rem 1.2rem; font-family: ‘Cinzel’, serif; font-size: 0.78rem; font-weight: 700; cursor: pointer; border-radius: 4px; letter-spacing: 0.08em; }
-.btn-reject { background: #c0392b; color: #fff; border: none; padding: 0.5rem 1.2rem; font-family: ‘Cinzel’, serif; font-size: 0.78rem; font-weight: 700; cursor: pointer; border-radius: 4px; letter-spacing: 0.08em; }
-.admin-tabs { display: flex; border-bottom: 1px solid rgba(255,107,0,0.15); margin-bottom: 1.5rem; }
-.admin-tab { padding: 0.7rem 1.2rem; font-family: ‘Cinzel’, serif; font-size: 0.78rem; letter-spacing: 0.1em; color: rgba(255,240,220,0.4); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
-.admin-tab.active { color: var(–saffron-light); border-bottom-color: var(–saffron-light); }
-.admin-empty { color: rgba(255,240,220,0.4); text-align: center; padding: 2rem; font-style: italic; }
-#passError { color: #ff6b6b; margin-top: 0.8rem; font-size: 0.9rem; display: none; }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 700px) {
-.form-grid { grid-template-columns: 1fr; }
-.form-group.full { grid-column: 1; }
-.form-section-label { grid-column: 1; }
-.nav-links { display: none; }
-.gallery-grid { grid-template-columns: 1fr 1fr; }
-.gallery-item.tall { grid-row: span 1; }
-.gallery-item.wide { grid-column: span 2; }
-.rf-grid { grid-template-columns: 1fr; }
-.rf-grid .full { grid-column: 1; }
-.stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.hl-item { border-right: none; }
-.wa-float span { display: none; }
-.wa-float { padding: 1rem; border-radius: 50%; }
-}
-
-/* Gallery photos */
-.gallery-photo {
-width: 100%;
-height: 100%;
-min-height: 180px;
-object-fit: cover;
-display: block;
-transition: transform 0.4s ease;
-}
-.gallery-item:hover .gallery-photo { transform: scale(1.06); }
-.gallery-item.tall .gallery-photo { min-height: 380px; }
-.gallery-item.wide .gallery-photo { min-height: 220px; }
-
-/* Info Modal */
-.info-modal {
-display: none;
-position: fixed;
-inset: 0;
-background: rgba(0,0,0,0.85);
-z-index: 500;
-padding: 1.5rem;
-overflow-y: auto;
-align-items: center;
-justify-content: center;
-}
-.info-modal.open { display: flex; }
-.info-box {
-background: #fff;
-border-radius: 12px;
-max-width: 550px;
-width: 100%;
-overflow: hidden;
-position: relative;
-animation: slideUp 0.3s ease;
-}
-@keyframes slideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-.info-close {
-position: absolute;
-top: 1rem; right: 1rem;
-background: rgba(0,0,0,0.5);
-color: #fff;
-border: none;
-width: 34px; height: 34px;
-border-radius: 50%;
-cursor: pointer;
-font-size: 1rem;
-z-index: 10;
-}
-/* Photo Slider */
-.photo-slider { position: relative; width: 100%; height: 240px; overflow: hidden; background: #000; }
-.slides { width: 100%; height: 100%; }
-.slide-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s ease; }
-.slide-img.active { opacity: 1; }
-.slider-btn {
-position: absolute; top: 50%; transform: translateY(-50%);
-background: rgba(0,0,0,0.5); color: #fff; border: none;
-width: 36px; height: 36px; border-radius: 50%; font-size: 1.4rem;
-cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
-}
-.slider-btn.prev { left: 0.5rem; }
-.slider-btn.next { right: 0.5rem; }
-.slider-dots { position: absolute; bottom: 0.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.2s; }
-.dot.active { background: #fff; }
-
-/* YouTube Video */
-.info-video-wrap { margin: 1.2rem 0 0; border-radius: 8px; overflow: hidden; }
-.info-video-wrap iframe { width: 100%; height: 200px; display: block; }
-.info-photo { width: 100%; height: 220px; object-fit: cover; display: block; }
-.info-body { padding: 1.5rem; }
-.info-tag { font-family: ‘Cinzel’, serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(–saffron); margin-bottom: 0.5rem; }
-.info-title { font-family: ‘Cinzel Decorative’, serif; font-size: 1.4rem; color: var(–maroon); margin-bottom: 0.8rem; }
-.info-desc { font-size: 1rem; color: #5A3010; line-height: 1.75; margin-bottom: 1rem; }
-.info-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-.info-fact { background: var(–saffron-pale); border-radius: 6px; padding: 0.6rem 0.8rem; }
-.info-fact-label { font-family: ‘Cinzel’, serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(–saffron); display: block; margin-bottom: 0.2rem; }
-.info-fact-val { font-size: 0.9rem; color: var(–maroon); font-weight: 600; }
-
 </style>
 </head>
+
 <body>
 
-<!-- FLOATING WHATSAPP -->
-
-<a href="https://wa.me/919906901897?text=Jai%20Mata%20Di!%20I%20would%20like%20to%20enquire%20about%20a%20travel%20package%20from%20SS%20Travels." class="wa-float" target="_blank">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>Chat with Us</span>
-</a>
-
-<!-- NAV -->
+<div class="topbar">
+🔥 Helicopter Slots Filling Fast – Book Early for Vaishno Devi Yatra
+</div>
 
 <nav>
-  <div class="nav-logo">✦ SS <span>TRAVELS</span></div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#booking">Book Now</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="https://wa.me/919906901897" class="nav-wa" target="_blank">WhatsApp</a></li>
-  </ul>
+<div class="logo">SS Travels – Katra</div>
+<div>
+<a href="#services">Services</a>
+<a href="#destinations">Destinations</a>
+<a href="#booking">Book Now</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-  <div class="mandala-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="diyas"></div>
-  <div class="hero-mountain">
-    <svg viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="mtnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#2D0F00;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0A0300;stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      <!-- Snow caps -->
-      <path d="M520,60 L560,30 L600,60 Z" fill="rgba(255,255,255,0.15)"/>
-      <path d="M720,20 L760,0 L800,20 Z" fill="rgba(255,255,255,0.2)"/>
-      <path d="M320,100 L360,75 L400,100 Z" fill="rgba(255,255,255,0.1)"/>
-      <!-- Mountains back -->
-      <path d="M0,500 L0,280 L120,180 L200,230 L320,100 L420,160 L520,60 L620,130 L720,20 L820,110 L920,50 L1020,140 L1120,80 L1220,160 L1320,200 L1440,140 L1440,500 Z" fill="url(#mtnGrad)" opacity="0.85"/>
-      <!-- Mountains mid -->
-      <path d="M0,500 L0,350 L200,270 L350,310 L500,230 L650,290 L800,240 L950,300 L1100,250 L1250,310 L1440,270 L1440,500 Z" fill="#150700" opacity="0.92"/>
-      <!-- Foreground -->
-      <path d="M0,500 L0,420 L250,370 L450,400 L650,360 L850,395 L1050,365 L1250,400 L1440,375 L1440,500 Z" fill="#0A0300"/>
-      <!-- Temple -->
-      <rect x="695" y="155" width="50" height="70" fill="#0D0500"/>
-      <polygon points="685,155 720,115 755,155" fill="#0D0500"/>
-      <polygon points="700,115 720,90 740,115" fill="rgba(212,160,23,0.6)"/>
-      <rect x="703" y="225" width="34" height="15" fill="#0D0500"/>
-      <!-- Diya lights at temple -->
-      <circle cx="695" cy="228" r="2" fill="rgba(255,150,50,0.8)"/>
-      <circle cx="745" cy="228" r="2" fill="rgba(255,150,50,0.8)"/>
-      <circle cx="720" cy="89" r="3" fill="rgba(212,160,23,0.9)"/>
-    </svg>
-  </div>
-  <div class="hero-content">
-    <div class="om-container">
-      <div class="om-ring"></div>
-      <div class="om-ring-2"></div>
-      <span class="om-symbol">ॐ</span>
-    </div>
-    <p class="hero-eyebrow">Jai Mata Di &nbsp;·&nbsp; Est. Katra, J&K</p>
-    <h1>SS TRAVELS<br><span class="saffron">Vaishno Devi</span> <span class="gold">Yatra</span></h1>
-    <div class="divider-sacred"><span>✦</span></div>
-    <p class="hero-sub">Your sacred pilgrimage, beautifully arranged from Katra</p>
-    <p class="hero-loc">📍 Katra, Jammu & Kashmir</p>
-    <div class="hero-btns">
-      <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Plan My Yatra</button>
-      <button class="btn-outline" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Explore Kashmir</button>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    SCROLL
-  </div>
+<h1>Vaishno Devi & Kashmir Travel Experts</h1>
+<p>Based in Katra, we arrange complete travel solutions including Vaishno Devi Yatra, Kashmir tours, Leh Ladakh trips, Char Dham Yatra, flights, trains and cab services.</p>
+<a class="btn" href="#booking">Plan My Trip</a>
+<a class="btn" href="https://wa.me/919906901897" target="_blank">WhatsApp Now</a>
 </section>
 
-<!-- STATS BAR -->
-
-<div class="stats-bar reveal">
-  <div class="stat-item">
-    <span class="stat-num" data-target="500">0</span>
-    <span class="stat-label">Happy Pilgrims</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num" data-target="100">0</span>
-    <span class="stat-label">% Custom Packages</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num">24/7</span>
-    <span class="stat-label">WhatsApp Support</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-num">J&K</span>
-    <span class="stat-label">Local Experts</span>
-  </div>
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card"><h3>Vaishno Devi Yatra</h3><p>Helicopter, battery car, pony, palki, hotel booking.</p></div>
+<div class="card"><h3>Kashmir Tours</h3><p>Srinagar, Gulmarg, Pahalgam, Sonamarg full packages.</p></div>
+<div class="card"><h3>Leh Ladakh</h3><p>Pangong Lake, Nubra Valley, adventure trips.</p></div>
+<div class="card"><h3>Char Dham Yatra</h3><p>Badrinath, Kedarnath, Gangotri, Yamunotri packages.</p></div>
+<div class="card"><h3>Flight & Train Booking</h3><p>Best prices with full support.</p></div>
+<div class="card"><h3>Car & Cab Services</h3><p>Airport pickup, local & outstation travel.</p></div>
 </div>
-
-<!-- SERVICES -->
-
-<section class="services-section" id="services">
-  <div class="reveal">
-    <span class="section-tag">What We Offer</span>
-    <h2 class="section-title" style="color:var(--maroon);">Complete Travel Solutions</h2>
-    <p class="section-desc">From your sacred Vaishno Devi Yatra to holidays across Kashmir, India and beyond — we handle every single detail.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal"><span class="service-icon">🛕</span><h3>Vaishno Devi Yatra</h3><p>Helicopter, Battery Car, Pony rides, Palki — all arranged from Katra with hotel booking included.</p></div>
-    <div class="service-card reveal"><span class="service-icon">🕉️</span><h3>Char Dham Yatra</h3><p>Badrinath, Kedarnath, Gangotri, Yamunotri — complete Char Dham pilgrimage packages arranged for you.</p></div>
-    <div class="service-card reveal"><span class="service-icon">🏔️</span><h3>Kashmir Sightseeing</h3><p>Srinagar, Gulmarg, Pahalgam, Sonamarg, Dal Lake — curated tours of heaven on earth.</p></div>
-    <div class="service-card reveal"><span class="service-icon">🏜️</span><h3>Leh & Ladakh</h3><p>Pangong Lake, Nubra Valley, Magnetic Hill — the ultimate adventure trip arranged for you.</p></div>
-    <div class="service-card reveal"><span class="service-icon">✈️</span><h3>Flight Booking</h3><p>Domestic and international flights at the best prices, tailored to your schedule.</p></div>
-    <div class="service-card reveal"><span class="service-icon">🚂</span><h3>Train Booking</h3><p>Train reservations across India including tatkal, group bookings and full journey planning.</p></div>
-    <div class="service-card reveal"><span class="service-icon">🚗</span><h3>Car & Cab</h3><p>Comfortable cabs for local trips, airport drops, outstation travel across J&K.</p></div>
-  </div>
 </section>
 
-<!-- GALLERY -->
-
-<section class="gallery-section" id="gallery">
-  <div class="reveal">
-    <span class="section-tag" style="color:var(--saffron-light);">Glimpses of the Journey</span>
-    <h2 class="section-title">Kashmir & Vaishno Devi</h2>
-    <p class="section-desc" style="color:rgba(255,240,220,0.6);">From the sacred cave shrine of Mata Vaishno Devi to the snow-capped valleys of Kashmir — every journey is a memory forever.</p>
-  </div>
-  <div class="gallery-grid">
-
-```
-<!-- Vaishno Devi -->
-<div class="gallery-item tall reveal-left" onclick="openInfo('vaishno')" style="background:linear-gradient(160deg,#8B4513,#D2691E,#FF8C00,#FFD700)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80" alt="Vaishno Devi" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">🛕 Mata Vaishno Devi</div>
-    <div class="gallery-desc">The sacred shrine · Katra, J&K · Tap for details</div>
-  </div>
+<section class="section" id="destinations">
+<h2>Top Destinations</h2>
+<div class="destinations">
+<div class="dest">🛕 Vaishno Devi – Katra</div>
+<div class="dest">🌊 Srinagar & Dal Lake</div>
+<div class="dest">❄️ Gulmarg</div>
+<div class="dest">🌲 Pahalgam</div>
+<div class="dest">🏔 Sonamarg</div>
+<div class="dest">💙 Leh Ladakh</div>
+<div class="dest">🕉 Char Dham</div>
+<div class="dest">🌄 Patnitop</div>
 </div>
-
-<!-- Dal Lake -->
-<div class="gallery-item reveal" onclick="openInfo('dal')" style="background:linear-gradient(135deg,#1a3a5c,#2E8B57,#87CEEB)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1566837945700-30057527ade0?w=600&q=80" alt="Dal Lake Srinagar" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">⛵ Dal Lake, Srinagar</div>
-    <div class="gallery-desc">Shikara rides & Houseboats · Tap for details</div>
-  </div>
-</div>
-
-<!-- Gulmarg -->
-<div class="gallery-item reveal" onclick="openInfo('gulmarg')" style="background:linear-gradient(135deg,#4B0082,#8B008B,#E0C0FF)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=80" alt="Gulmarg Kashmir" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">❄️ Gulmarg</div>
-    <div class="gallery-desc">Snow paradise of Kashmir · Tap for details</div>
-  </div>
-</div>
-
-<!-- Pangong Lake -->
-<div class="gallery-item wide reveal" onclick="openInfo('pangong')" style="background:linear-gradient(135deg,#006994,#0099CC,#87CEEB)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=900&q=80" alt="Pangong Lake Ladakh" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">💙 Pangong Lake, Ladakh</div>
-    <div class="gallery-desc">Where the sky meets the blue waters · Tap for details</div>
-  </div>
-</div>
-
-<!-- Pahalgam -->
-<div class="gallery-item reveal-right" onclick="openInfo('pahalgam')" style="background:linear-gradient(135deg,#2F4F4F,#556B2F,#90EE90)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80" alt="Pahalgam Kashmir" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">🌲 Pahalgam</div>
-    <div class="gallery-desc">Valley of Shepherds · Tap for details</div>
-  </div>
-</div>
-
-<!-- Char Dham -->
-<div class="gallery-item reveal-right" onclick="openInfo('chardham')" style="background:linear-gradient(135deg,#8B0000,#DC143C,#FFA07A)">
-  <img class="gallery-photo" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80" alt="Char Dham Kedarnath" onerror="this.style.display='none'">
-  <div class="gallery-img-overlay">
-    <div class="gallery-place">🕉️ Char Dham Yatra</div>
-    <div class="gallery-desc">Kedarnath, Badrinath & more · Tap for details</div>
-  </div>
-</div>
-```
-
-  </div>
 </section>
 
-<!-- INFO MODAL -->
+<section class="section" id="booking">
+<h2>Book Your Trip</h2>
+<div class="booking">
+<form onsubmit="sendWhatsApp(); return false;">
+<label>Name *</label>
+<input type="text" id="name" required>
 
-<div class="info-modal" id="infoModal" onclick="closeInfo()">
-  <div class="info-box" onclick="event.stopPropagation()">
-    <button class="info-close" onclick="closeInfo()">✕</button>
+<label>Phone *</label>
+<input type="tel" id="phone" required>
 
-```
-<!-- Photo Slider -->
-<div class="photo-slider">
-  <div class="slides" id="photoSlider"></div>
-  <button class="slider-btn prev" onclick="prevSlide()">&#8249;</button>
-  <button class="slider-btn next" onclick="nextSlide()">&#8250;</button>
-  <div class="slider-dots" id="sliderDots"></div>
+<label>Travel Date *</label>
+<input type="date" id="date" required>
+
+<label>Destination *</label>
+<select id="destination" required>
+<option value="">Select</option>
+<option>Vaishno Devi</option>
+<option>Kashmir Tour</option>
+<option>Leh Ladakh</option>
+<option>Char Dham</option>
+<option>Other</option>
+</select>
+
+<label>Message</label>
+<textarea id="message"></textarea>
+
+<button class="btn" type="submit">Send Enquiry</button>
+</form>
 </div>
-
-<div class="info-body">
-  <div class="info-tag" id="infoTag"></div>
-  <h3 class="info-title" id="infoTitle"></h3>
-  <p class="info-desc" id="infoDesc"></p>
-  <div class="info-facts" id="infoFacts"></div>
-  
-  <!-- YouTube Video -->
-  <div class="info-video-wrap">
-    <iframe id="infoVideo" src="" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-  </div>
-  
-  <button class="btn-primary" onclick="closeInfo();document.getElementById('booking').scrollIntoView({behavior:'smooth'})" style="margin-top:1.2rem;font-size:0.8rem;width:100%;">Plan This Trip</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- BOOKING FORM -->
-
-<section class="booking-section" id="booking">
-  <div class="booking-inner reveal">
-    <div class="booking-header">
-      <span class="om-small">🙏</span>
-      <h2>Get Your Custom Package</h2>
-      <p>No fixed prices — every package is personally quoted for you</p>
-    </div>
-    <div class="booking-body">
-      <div class="no-price-notice">
-        <span style="font-size:1.3rem">💬</span>
-        <p><strong>How it works:</strong> Fill the form → Click Send → All your details go to our WhatsApp → We call you back with a personalised quote. Free & instant!</p>
-      </div>
-      <form id="bookingForm">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Your Full Name *</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group">
-            <label>WhatsApp / Phone *</label>
-            <input type="tel" id="phone" placeholder="+91 XXXXXXXXXX" required>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="email" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label>Travelling From (City)</label>
-            <input type="text" id="fromCity" placeholder="e.g. Delhi, Mumbai...">
-          </div>
-          <div class="form-group">
-            <label>Travel Date *</label>
-            <input type="date" id="travelDate" required>
-          </div>
-          <div class="form-group">
-            <label>Number of Persons *</label>
-            <div class="select-wrap">
-              <select id="persons" required>
-                <option value="" disabled selected>Select persons</option>
-                <option>1 Person</option><option>2 Persons</option><option>3 Persons</option>
-                <option>4 Persons</option><option>5 Persons</option><option>6 Persons</option>
-                <option>7-10 Persons</option><option>11-20 Persons (Group)</option><option>20+ Persons (Large Group)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Number of Days</label>
-            <div class="select-wrap">
-              <select id="days">
-                <option value="" disabled selected>Select duration</option>
-                <option>1 Day</option><option>2 Days / 1 Night</option><option>3 Days / 2 Nights</option>
-                <option>4 Days / 3 Nights</option><option>5 Days / 4 Nights</option>
-                <option>6 Days / 5 Nights</option><option>7 Days / 6 Nights</option><option>More than 7 Days</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Budget Range (Optional)</label>
-            <div class="select-wrap">
-              <select id="budget">
-                <option value="" disabled selected>Select budget per person</option>
-                <option>Under Rs. 5,000</option>
-                <option>Rs. 5,000 – 10,000</option>
-                <option>Rs. 10,000 – 20,000</option>
-                <option>Rs. 20,000 – 50,000</option>
-                <option>Rs. 50,000+</option>
-                <option>No specific budget</option>
-              </select>
-            </div>
-          </div>
-
-```
-      <div class="form-section-label">Services Required (Select all that apply) *</div>
-      <div class="form-group full">
-        <div class="pill-group">
-          <label class="pill"><input type="checkbox" name="package" value="Vaishno Devi Yatra"> <span>🛕 Vaishno Devi Yatra</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Char Dham Yatra"> <span>🕉️ Char Dham Yatra</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Srinagar Sightseeing"> <span>🌊 Srinagar</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Gulmarg"> <span>❄️ Gulmarg</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Pahalgam"> <span>🌲 Pahalgam</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Sonamarg"> <span>🏔️ Sonamarg</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Leh Ladakh"> <span>🏜️ Leh Ladakh</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Patnitop"> <span>🌄 Patnitop</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Jammu Sightseeing"> <span>🏛️ Jammu City</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Flight Booking"> <span>✈️ Flight Booking</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Train Booking"> <span>🚂 Train Booking</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Car / Cab Booking"> <span>🚗 Car / Cab</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Hotel Booking"> <span>🏨 Hotel Only</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="International Tour"> <span>🌍 International Tour</span></label>
-          <label class="pill"><input type="checkbox" name="package" value="Custom Holiday Package"> <span>🎒 Custom Package</span></label>
-        </div>
-      </div>
-
-      <div class="form-section-label">Hotel Preference</div>
-      <div class="form-group full">
-        <div class="pill-group">
-          <label class="pill"><input type="checkbox" name="hotel" value="Budget / Dharamshala"> <span>🏠 Budget / Dharamshala</span></label>
-          <label class="pill"><input type="checkbox" name="hotel" value="Tent / Camp"> <span>⛺ Tent / Camp</span></label>
-          <label class="pill"><input type="checkbox" name="hotel" value="3 Star Hotel"> <span>⭐⭐⭐ 3 Star</span></label>
-          <label class="pill"><input type="checkbox" name="hotel" value="4 Star Hotel"> <span>⭐⭐⭐⭐ 4 Star</span></label>
-          <label class="pill"><input type="checkbox" name="hotel" value="5 Star Hotel"> <span>⭐⭐⭐⭐⭐ 5 Star</span></label>
-        </div>
-      </div>
-
-      <div class="form-section-label">Mode of Travel to Shrine</div>
-      <div class="form-group full">
-        <div class="pill-group">
-          <label class="pill"><input type="checkbox" name="mode" value="On Foot (Trekking)"> <span>🥾 On Foot</span></label>
-          <label class="pill"><input type="checkbox" name="mode" value="Battery Car"> <span>🚖 Battery Car</span></label>
-          <label class="pill"><input type="checkbox" name="mode" value="Helicopter"> <span>🚁 Helicopter</span></label>
-          <label class="pill"><input type="checkbox" name="mode" value="Pony / Horse Ride"> <span>🐴 Pony / Horse</span></label>
-          <label class="pill"><input type="checkbox" name="mode" value="Palki / Doli"> <span>🪑 Palki / Doli</span></label>
-        </div>
-      </div>
-
-      <div class="form-section-label">Extra Services</div>
-      <div class="form-group full">
-        <div class="pill-group">
-          <label class="pill"><input type="checkbox" name="extras" value="Airport / Railway Pickup & Drop"> <span>🚗 Pickup & Drop</span></label>
-          <label class="pill"><input type="checkbox" name="extras" value="Tour Guide"> <span>🧑‍🏫 Tour Guide</span></label>
-          <label class="pill"><input type="checkbox" name="extras" value="Prasad & Puja Arrangements"> <span>🙏 Prasad & Puja</span></label>
-          <label class="pill"><input type="checkbox" name="extras" value="Srinagar Houseboat Stay"> <span>🛶 Houseboat Stay</span></label>
-          <label class="pill"><input type="checkbox" name="extras" value="Shikara Ride"> <span>⛵ Shikara Ride</span></label>
-        </div>
-      </div>
-
-      <div class="form-group full">
-        <label>Any Special Requirements or Questions</label>
-        <textarea id="message" placeholder="Tell us anything — elderly travellers, medical needs, specific places, budget range, anything at all..."></textarea>
-      </div>
-    </div>
-
-    <div class="submit-row">
-      <button type="button" class="btn-wa" onclick="sendWhatsApp()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Send via WhatsApp
-      </button>
-      <button type="button" class="btn-mail" onclick="sendEmail()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-        Send via Email
-      </button>
-    </div>
-    <div class="success-msg" id="successMsg">🙏 Thank you! Your enquiry has been sent. SS Travels will contact you shortly with your personalised quote. Jai Mata Di!</div>
-  </form>
-</div>
-```
-
-  </div>
 </section>
 
-<!-- REVIEWS -->
-
-<section class="reviews-section" id="reviews">
-  <div class="reveal">
-    <span class="section-tag">Real Experiences</span>
-    <h2 class="section-title" style="color:var(--maroon);">What Our Pilgrims Say</h2>
-    <p class="section-desc">Thousands of devotees have trusted SS Travels. Here's what they say about their journey.</p>
-  </div>
-  <div class="reviews-grid" id="reviewsGrid">
-    <div class="review-card reveal">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Mata ka bulawa tha aur SS Travels ne poora safar itna smooth bana diya. Helicopter booking se lekar hotel tak sab kuch perfect tha. Jai Mata Di! 🙏</p>
-      <div class="review-author">
-        <div class="review-avatar">RK</div>
-        <div><div class="review-name">Rajesh Kumar</div><div class="review-meta">January 2025 · Vaishno Devi Yatra · Family of 5</div></div>
-      </div>
-    </div>
-    <div class="review-card reveal">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">We are from Delhi and had no idea about Katra. SS Travels arranged everything — hotel, battery car, prasad — and was available on WhatsApp 24/7. Highly recommended!</p>
-      <div class="review-author">
-        <div class="review-avatar">PS</div>
-        <div><div class="review-name">Priya Sharma</div><div class="review-meta">December 2024 · Vaishno Devi + Srinagar · Couple</div></div>
-      </div>
-    </div>
-    <div class="review-card reveal">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Bahut hi acha service mila. 5 star hotel, helicopter ride sab arranged tha. Papa ko chalne mein takleef thi, unhone palki arrange kar di. Dil se shukriya SS Travels!</p>
-      <div class="review-author">
-        <div class="review-avatar">AS</div>
-        <div><div class="review-name">Amit Singh</div><div class="review-meta">November 2024 · Vaishno Devi Yatra · Group of 8</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="review-form-box reveal">
-    <h3>Share Your Experience 🌟</h3>
-    <div class="rf-grid">
-      <div><label>Your Name *</label><input type="text" id="revName" placeholder="Your full name"></div>
-      <div><label>City You're From</label><input type="text" id="revCity" placeholder="e.g. Delhi, Pune..."></div>
-      <div>
-        <label>Trip Type</label>
-        <select id="revTrip">
-          <option value="">Select your trip type</option>
-          <option>Vaishno Devi Yatra</option>
-          <option>Vaishno Devi + Kashmir</option>
-          <option>Kashmir Sightseeing (Srinagar / Gulmarg / Pahalgam)</option>
-          <option>Leh Ladakh</option>
-          <option>Char Dham Yatra</option>
-          <option>Sonamarg</option>
-          <option>Patnitop</option>
-          <option>Jammu City Tour</option>
-          <option>Flight / Train Booking</option>
-          <option>Car / Cab Booking</option>
-          <option>Custom Holiday Package</option>
-          <option>International Tour</option>
-        </select>
-      </div>
-      <div><label>Travel Month</label><input type="month" id="revMonth"></div>
-      <div class="full">
-        <label>Your Rating *</label>
-        <div class="star-rating" id="starRating">
-          <span data-val="1">★</span><span data-val="2">★</span><span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
-        </div>
-      </div>
-      <div class="full">
-        <label>Your Review *</label>
-        <textarea id="revText" placeholder="Tell others about your experience — the service, the journey, the memories..."></textarea>
-      </div>
-      <div class="full">
-        <label>Your Photo (Optional)</label>
-        <label class="photo-upload-label" for="reviewPhoto">📷 Choose a photo of yourself or your trip</label>
-        <input type="file" id="reviewPhoto" accept="image/*">
-        <img id="photoPreview" alt="Preview">
-      </div>
-    </div>
-    <button class="btn-submit-review" onclick="submitReview()">Submit My Review</button>
-    <div class="review-success" id="reviewSuccess">🙏 Thank you! Your review will appear after approval. Jai Mata Di!</div>
-  </div>
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center;font-size:18px;margin-bottom:15px;">
+📞 +91 99069 01897 | +91 60052 53577
+</p>
+<p style="text-align:center;">
+📧 sskatra@gmail.com
+</p>
 </section>
-
-<!-- ABOUT -->
-
-<section class="about-section" id="about">
-  <div class="about-inner">
-    <div class="reveal">
-      <span class="section-tag">Our Story</span>
-      <h2 class="section-title">SS Travels — Trusted from Katra</h2>
-    </div>
-    <p class="reveal">Based in the holy town of Katra, the gateway to Mata Vaishno Devi, SS Travels is a fully online travel agency run by a passionate team dedicated to making every journey smooth, sacred, and memorable.</p>
-    <p class="reveal">Whether you are a devotee seeking blessings at Vaishno Devi, a family planning a Kashmir holiday, or a traveller needing flights, trains, or cabs — we handle it all personally via WhatsApp and calls. No middlemen. Just honest, caring service from Katra.</p>
-    <div class="highlights reveal">
-      <div class="hl-item"><span class="hl-num">500+</span><span class="hl-label">Happy Pilgrims</span></div>
-      <div class="hl-item"><span class="hl-num">100%</span><span class="hl-label">Custom Packages</span></div>
-      <div class="hl-item"><span class="hl-num">24/7</span><span class="hl-label">WhatsApp Support</span></div>
-      <div class="hl-item"><span class="hl-num">5★</span><span class="hl-label">Service Rating</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact-section" id="contact">
-  <h2>Talk to Us Directly</h2>
-  <p>We're available on WhatsApp and Email — reach out anytime, any day</p>
-  <div class="contact-links">
-    <a href="https://wa.me/919906901897" class="contact-link" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      +91 99069 01897
-    </a>
-    <a href="mailto:sskatra@gmail.com" class="contact-link">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-      sskatra@gmail.com
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
 
 <footer>
-  <p>© 2025 <span>SS Travels</span> · Katra, Jammu & Kashmir · All Rights Reserved</p>
-  <p style="margin-top:0.5rem;">🙏 Jai Mata Di — Safe & Blessed Journeys for Every Pilgrim</p>
-  <p style="margin-top:0.8rem;"><a class="admin-trigger" onclick="openAdmin()">admin</a></p>
+© 2025 SS Travels – Katra, Jammu & Kashmir  
+<br>🙏 Jai Mata Di – Safe & Blessed Journeys
 </footer>
 
-<!-- ADMIN PANEL -->
-
-<div class="admin-overlay" id="adminOverlay">
-  <div class="admin-box">
-    <div class="admin-header">
-      <h2>SS Travels — Admin Panel</h2>
-      <button class="admin-close" onclick="closeAdmin()">✕</button>
-    </div>
-    <div id="adminLogin" class="admin-login">
-      <p style="color:rgba(255,240,220,0.7); margin-bottom:1.5rem;">Enter admin password</p>
-      <input type="password" id="adminPass" placeholder="Password" onkeydown="if(event.key==='Enter') checkPass()">
-      <br><br>
-      <button onclick="checkPass()">Login</button>
-      <p id="passError">Wrong password. Try again.</p>
-    </div>
-    <div id="adminContent" style="display:none;">
-      <div class="admin-content">
-        <div class="admin-tabs">
-          <div class="admin-tab active" onclick="showTab('pending')">Pending Reviews</div>
-          <div class="admin-tab" onclick="showTab('approved')">Approved Reviews</div>
-        </div>
-        <div id="pendingTab"></div>
-        <div id="approvedTab" style="display:none;"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<a class="whatsapp-float" href="https://wa.me/919906901897" target="_blank">💬</a>
 
 <script>
-// ============================
-// ADMIN PASSWORD
-// ============================
-const ADMIN_PASSWORD = 'sstravels2025';
+function sendWhatsApp(){
+var name=document.getElementById('name').value;
+var phone=document.getElementById('phone').value;
+var date=document.getElementById('date').value;
+var destination=document.getElementById('destination').value;
+var message=document.getElementById('message').value;
 
-// ============================
-// SCROLL REVEAL - simplified for Safari compatibility
-// ============================
-let observer = { observe: function() {} };
+var text="New Travel Enquiry%0A";
+text+="Name: "+name+"%0A";
+text+="Phone: "+phone+"%0A";
+text+="Date: "+date+"%0A";
+text+="Destination: "+destination+"%0A";
+text+="Message: "+message;
 
-// ============================
-// ANIMATED COUNTERS
-// ============================
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  if (!target) return;
-  let current = 0;
-  const step = target / 60;
-  const timer = setInterval(() => {
-    current += step;
-    if (current >= target) { current = target; clearInterval(timer); }
-    el.textContent = Math.floor(current) + (el.dataset.target === '500' ? '+' : '%');
-  }, 25);
+window.open("https://wa.me/919906901897?text="+text,"_blank");
 }
-try {
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.stats-bar').forEach(el => counterObserver.observe(el));
-} catch(e) {
-  document.querySelectorAll('[data-target]').forEach(animateCounter);
-}
-
-// ============================
-// PILL TOGGLE
-// ============================
-document.querySelectorAll('.pill input[type="checkbox"]').forEach(cb => {
-  cb.addEventListener('change', function() {
-    this.closest('.pill').classList.toggle('selected', this.checked);
-  });
-});
-
-// ============================
-// STAR RATING
-// ============================
-let selectedStars = 0;
-document.querySelectorAll('#starRating span').forEach(star => {
-  star.addEventListener('click', function() {
-    selectedStars = parseInt(this.dataset.val);
-    document.querySelectorAll('#starRating span').forEach((s, i) => s.classList.toggle('active', i < selectedStars));
-  });
-  star.addEventListener('mouseover', function() {
-    const val = parseInt(this.dataset.val);
-    document.querySelectorAll('#starRating span').forEach((s, i) => s.classList.toggle('active', i < val));
-  });
-  star.addEventListener('mouseout', function() {
-    document.querySelectorAll('#starRating span').forEach((s, i) => s.classList.toggle('active', i < selectedStars));
-  });
-});
-
-// Photo preview
-document.getElementById('reviewPhoto').addEventListener('change', function() {
-  const file = this.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const preview = document.getElementById('photoPreview');
-      preview.src = e.target.result;
-      preview.style.display = 'block';
-    };
-    reader.readAsDataURL(file);
-  }
-});
-
-// ============================
-// REVIEWS STORAGE
-// ============================
-function getReviews() {
-  try { return JSON.parse(localStorage.getItem('ss_reviews') || '[]'); } catch(e) { return []; }
-}
-function saveReviews(arr) { localStorage.setItem('ss_reviews', JSON.stringify(arr)); }
-
-function renderApprovedReviews() {
-  const reviews = getReviews().filter(r => r.approved);
-  document.querySelectorAll('.real-review').forEach(el => el.remove());
-  const grid = document.getElementById('reviewsGrid');
-  reviews.forEach(r => {
-    const card = document.createElement('div');
-    card.className = 'review-card real-review';
-    const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
-    const initials = r.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
-    const avatarContent = r.photo ? `<img src="${r.photo}" alt="${r.name}">` : initials;
-    card.innerHTML = `
-      <div class="review-stars">${stars}</div>
-      <p class="review-text">${r.text}</p>
-      <div class="review-author">
-        <div class="review-avatar">${avatarContent}</div>
-        <div>
-          <div class="review-name">${r.name}${r.city ? ' · ' + r.city : ''}</div>
-          <div class="review-meta">${r.date}${r.trip ? ' · ' + r.trip : ''}</div>
-        </div>
-      </div>`;
-    grid.appendChild(card);
-    observer.observe(card);
-  });
-}
-
-function submitReview() {
-  const name = document.getElementById('revName').value.trim();
-  const text = document.getElementById('revText').value.trim();
-  if (!name) { alert('Please enter your name.'); return; }
-  if (!text) { alert('Please write your review.'); return; }
-  if (selectedStars === 0) { alert('Please select a star rating.'); return; }
-
-  const review = {
-    id: Date.now(),
-    name, text,
-    city: document.getElementById('revCity').value.trim(),
-    trip: document.getElementById('revTrip').value,
-    stars: selectedStars,
-    photo: null,
-    approved: false,
-    date: new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })
-  };
-
-  const photoFile = document.getElementById('reviewPhoto').files[0];
-  if (photoFile) {
-    const reader = new FileReader();
-    reader.onload = e => { review.photo = e.target.result; saveAndNotify(review); };
-    reader.readAsDataURL(photoFile);
-  } else {
-    saveAndNotify(review);
-  }
-}
-
-function saveAndNotify(review) {
-  const reviews = getReviews();
-  reviews.push(review);
-  saveReviews(reviews);
-  document.getElementById('reviewSuccess').style.display = 'block';
-  ['revName','revCity','revText','revMonth'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('revTrip').value = '';
-  document.getElementById('reviewPhoto').value = '';
-  document.getElementById('photoPreview').style.display = 'none';
-  selectedStars = 0;
-  document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('active'));
-
-  const msg = `*New Customer Review -- SS Travels*\n--------------------------------\n*Name:* ${review.name}\n*City:* ${review.city || 'Not specified'}\n*Trip Type:* ${review.trip || 'Not specified'}\n*Travel Month:* ${review.month || 'Not specified'}\n*Rating:* ${'★'.repeat(review.stars)}\n\n*Review:*\n${review.text}\n--------------------------------\n_Open admin panel on the website to approve or delete this review._`;
-  window.open(`https://wa.me/919906901897?text=${encodeURIComponent(msg)}`, '_blank');
-}
-
-// ============================
-// ADMIN PANEL
-// ============================
-function openAdmin() { document.getElementById('adminOverlay').style.display = 'block'; }
-function closeAdmin() { document.getElementById('adminOverlay').style.display = 'none'; }
-function checkPass() {
-  if (document.getElementById('adminPass').value === ADMIN_PASSWORD) {
-    document.getElementById('adminLogin').style.display = 'none';
-    document.getElementById('adminContent').style.display = 'block';
-    loadAdminReviews();
-  } else {
-    document.getElementById('passError').style.display = 'block';
-  }
-}
-function showTab(tab) {
-  document.querySelectorAll('.admin-tab').forEach((t,i) => t.classList.toggle('active', (tab==='pending'&&i===0)||(tab==='approved'&&i===1)));
-  document.getElementById('pendingTab').style.display = tab === 'pending' ? 'block' : 'none';
-  document.getElementById('approvedTab').style.display = tab === 'approved' ? 'block' : 'none';
-}
-function loadAdminReviews() {
-  const reviews = getReviews();
-  const pending = reviews.filter(r => !r.approved);
-  const approved = reviews.filter(r => r.approved);
-  const pTab = document.getElementById('pendingTab');
-  pTab.innerHTML = pending.length === 0 ? '<div class="admin-empty">No pending reviews!</div>' :
-    pending.map(r => `<div class="pending-review"><div class="rev-name">${r.name}${r.city?' · '+r.city:''} — ${'★'.repeat(r.stars)}</div><div class="rev-meta">${r.trip||''} · ${r.date}</div><div class="rev-text">${r.text}</div>${r.photo?`<img src="${r.photo}" style="width:55px;height:55px;border-radius:50%;object-fit:cover;border:2px solid #FF6B00;margin-bottom:0.8rem;">`:''}
-      <div class="rev-actions"><button class="btn-approve" onclick="approveReview(${r.id})">Approve — Show on Website</button><button class="btn-reject" onclick="deleteReview(${r.id})">Delete</button></div></div>`).join('');
-  const aTab = document.getElementById('approvedTab');
-  aTab.innerHTML = approved.length === 0 ? '<div class="admin-empty">No approved reviews yet.</div>' :
-    approved.map(r => `<div class="pending-review"><div class="rev-name">Approved: ${r.name} — ${'★'.repeat(r.stars)}</div><div class="rev-meta">${r.date}</div><div class="rev-text">${r.text}</div>
-      <div class="rev-actions"><button class="btn-reject" onclick="deleteReview(${r.id})">Remove from Website</button></div></div>`).join('');
-}
-function approveReview(id) {
-  const reviews = getReviews();
-  const idx = reviews.findIndex(r => r.id === id);
-  if (idx > -1) { reviews[idx].approved = true; saveReviews(reviews); renderApprovedReviews(); loadAdminReviews(); }
-}
-function deleteReview(id) {
-  if (!confirm('Delete this review?')) return;
-  saveReviews(getReviews().filter(r => r.id !== id));
-  renderApprovedReviews(); loadAdminReviews();
-}
-
-// ============================
-// BOOKING FORM
-// ============================
-function collectFormData() {
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const fromCity = document.getElementById('fromCity').value.trim();
-  const travelDate = document.getElementById('travelDate').value;
-  const persons = document.getElementById('persons').value;
-  const days = document.getElementById('days').value;
-  const budget = document.getElementById('budget').value;
-  const packages = [...document.querySelectorAll('input[name="package"]:checked')].map(c => c.value);
-  const hotels = [...document.querySelectorAll('input[name="hotel"]:checked')].map(c => c.value);
-  const modes = [...document.querySelectorAll('input[name="mode"]:checked')].map(c => c.value);
-  const extras = [...document.querySelectorAll('input[name="extras"]:checked')].map(c => c.value);
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !phone || !travelDate || !persons || packages.length === 0) {
-    alert('Please fill in Name, Phone, Travel Date, Persons, and select at least one Service.');
-    return null;
-  }
-  return { name, phone, email, fromCity, travelDate, persons, days, budget, packages, hotels, modes, extras, message };
-}
-
-function buildMessage(data) {
-  let msg = `*New Travel Enquiry -- SS Travels*\n`;
-  msg += `--------------------------------\n`;
-  msg += `*Name:* ${data.name}\n`;
-  msg += `*Phone/WhatsApp:* ${data.phone}\n`;
-  if (data.email) msg += `*Email:* ${data.email}\n`;
-  if (data.fromCity) msg += `*Travelling From:* ${data.fromCity}\n`;
-  msg += `*Travel Date:* ${data.travelDate}\n`;
-  msg += `*Persons:* ${data.persons}\n`;
-  if (data.days) msg += `*Duration:* ${data.days}\n`;
-  if (data.budget) msg += `*Budget:* ${data.budget}\n`;
-  if (data.packages.length) msg += `*Services Required:* ${data.packages.join(', ')}\n`;
-  if (data.hotels.length) msg += `*Hotel Preference:* ${data.hotels.join(', ')}\n`;
-  if (data.modes.length) msg += `*Travel Mode (Shrine):* ${data.modes.join(', ')}\n`;
-  if (data.extras.length) msg += `*Extra Services:* ${data.extras.join(', ')}\n`;
-  if (data.message) msg += `*Special Requirements:* ${data.message}\n`;
-  msg += `--------------------------------\n`;
-  msg += `_Sent via SS Travels website_`;
-  return msg;
-}
-
-function sendWhatsApp() {
-  const data = collectFormData();
-  if (!data) return;
-  window.open(`https://wa.me/919906901897?text=${encodeURIComponent(buildMessage(data))}`, '_blank');
-  document.getElementById('successMsg').style.display = 'block';
-}
-function sendEmail() {
-  const data = collectFormData();
-  if (!data) return;
-  const subject = encodeURIComponent(`Travel Enquiry from ${data.name} -- SS Travels`);
-  const body = encodeURIComponent(buildMessage(data).replace(/\*/g, ''));
-  window.open(`mailto:sskatra@gmail.com?subject=${subject}&body=${body}`, '_blank');
-  document.getElementById('successMsg').style.display = 'block';
-}
-
-
-// ============================
-// PLACE INFO MODAL - Enhanced with slider + video
-// ============================
-const placeData = {
-  vaishno: {
-    title: 'Mata Vaishno Devi',
-    tag: 'Sacred Pilgrimage · Katra, J&K',
-    photos: [
-      'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=800&q=80',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vaishno_Devi_Bhawan.jpg/800px-Vaishno_Devi_Bhawan.jpg',
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80'
-    ],
-    video: 'tVNBSB3GNUA',
-    desc: 'One of the most revered Hindu shrines in India, Mata Vaishno Devi is nestled in the Trikuta mountains at 5,200 ft. Millions of devotees visit every year to seek the blessings of Mata Rani. The 14 km trek from Katra is a deeply spiritual experience. SS Travels arranges helicopter, battery car, pony, and palki options for all ages.',
-    facts: [
-      { label: 'Altitude', val: '5,200 ft' },
-      { label: 'Distance from Katra', val: '14 km trek' },
-      { label: 'Best Season', val: 'Year-round' },
-      { label: 'Travel Options', val: 'Heli / Battery Car / Foot' },
-      { label: 'Ideal Duration', val: '2-3 Days' },
-      { label: 'Nearest City', val: 'Katra, J&K' }
-    ]
-  },
-  dal: {
-    title: 'Dal Lake, Srinagar',
-    tag: 'Heaven on Earth · Kashmir',
-    photos: [
-      'https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&q=80',
-      'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80',
-      'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80'
-    ],
-    video: 'YSonaE1LXGQ',
-    desc: "Dal Lake is the jewel of Srinagar and one of India's most iconic destinations. Famous for its floating houseboats, Shikara rides at sunset, and the surrounding Mughal gardens. A stay on a houseboat on Dal Lake is an experience unlike anything else.",
-    facts: [
-      { label: 'Location', val: 'Srinagar, Kashmir' },
-      { label: 'Famous For', val: 'Houseboats & Shikara' },
-      { label: 'Best Season', val: 'Apr–Oct' },
-      { label: 'Altitude', val: '1,587 m' },
-      { label: 'Ideal Duration', val: '2-3 Days' },
-      { label: 'Must Do', val: 'Sunset Shikara Ride' }
-    ]
-  },
-  gulmarg: {
-    title: 'Gulmarg',
-    tag: 'Snow Paradise · Kashmir',
-    photos: [
-      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-      'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80'
-    ],
-    video: 'vOcagsSmSo0',
-    desc: "Gulmarg, meaning Meadow of Flowers, is one of the most beautiful hill stations in India. In winter it transforms into a stunning skiing destination with Asia's highest gondola ride. In summer it blooms with wildflowers and is perfect for horse riding and golf.",
-    facts: [
-      { label: 'Altitude', val: '2,650 m' },
-      { label: 'Famous For', val: 'Skiing & Gondola Ride' },
-      { label: 'Best Season', val: 'Dec–Mar (Snow), May–Sep (Flowers)' },
-      { label: 'Distance from Srinagar', val: '56 km' },
-      { label: 'Ideal Duration', val: '1-2 Days' },
-      { label: 'Must Do', val: 'Phase 2 Gondola Ride' }
-    ]
-  },
-  pangong: {
-    title: 'Pangong Lake, Ladakh',
-    tag: 'Blue Waters of Ladakh',
-    photos: [
-      'https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=800&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80'
-    ],
-    video: 'fIX6T9SRc9M',
-    desc: 'Pangong Tso is a breathtakingly beautiful high-altitude lake at 4,350m, stretching 134 km from India into China. The lake changes colour from blue to green to red through the day. Famous worldwide after the movie 3 Idiots was filmed here.',
-    facts: [
-      { label: 'Altitude', val: '4,350 m' },
-      { label: 'Length', val: '134 km (India to China)' },
-      { label: 'Best Season', val: 'May–September' },
-      { label: 'Distance from Leh', val: '160 km' },
-      { label: 'Ideal Duration', val: '1 Night Camping' },
-      { label: 'Famous For', val: '3 Idiots Filming Location' }
-    ]
-  },
-  pahalgam: {
-    title: 'Pahalgam',
-    tag: 'Valley of Shepherds · Kashmir',
-    photos: [
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      'https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=80'
-    ],
-    video: 'DsWKRVoo7wQ',
-    desc: 'Pahalgam is a scenic hill station on the banks of the Lidder River, surrounded by pine forests and snowy peaks. It serves as the base camp for the famous Amarnath Yatra. Known for its peaceful valleys, pony rides to Baisaran (Mini Switzerland), and the stunning Aru and Betab valleys.',
-    facts: [
-      { label: 'Altitude', val: '2,130 m' },
-      { label: 'Famous For', val: 'Amarnath Base Camp, Mini Switzerland' },
-      { label: 'Best Season', val: 'April–October' },
-      { label: 'Distance from Srinagar', val: '95 km' },
-      { label: 'Ideal Duration', val: '2 Days' },
-      { label: 'Must Visit', val: 'Baisaran, Aru Valley' }
-    ]
-  },
-  chardham: {
-    title: 'Char Dham Yatra',
-    tag: 'Sacred Pilgrimage · Uttarakhand',
-    photos: [
-      'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Kedarnath_Temple.jpg/800px-Kedarnath_Temple.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Badrinath_Temple.jpg/800px-Badrinath_Temple.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Gangotri_Temple.jpg/800px-Gangotri_Temple.jpg'
-    ],
-    video: 'u9yDkgcx_jY',
-    desc: 'The Char Dham Yatra is one of the holiest pilgrimages in Hinduism — Yamunotri, Gangotri, Kedarnath, and Badrinath. SS Travels arranges complete packages including travel, accommodation, VIP darshan, and a dedicated guide throughout the journey.',
-    facts: [
-      { label: 'Four Dhams', val: 'Yamunotri, Gangotri, Kedarnath, Badrinath' },
-      { label: 'Best Season', val: 'May–June & Sep–Oct' },
-      { label: 'Ideal Duration', val: '10-12 Days' },
-      { label: 'Starting Point', val: 'Haridwar / Rishikesh' },
-      { label: 'Kedarnath Altitude', val: '3,583 m' },
-      { label: 'Travel Mode', val: 'Road, Heli, Foot' }
-    ]
-  }
-};
-
-let currentSlide = 0;
-let currentPlace = null;
-
-function openInfo(key) {
-  const d = placeData[key];
-  if (!d) return;
-  currentPlace = d;
-  currentSlide = 0;
-  
-  // Set content
-  document.getElementById('infoTag').textContent = d.tag;
-  document.getElementById('infoTitle').textContent = d.title;
-  document.getElementById('infoDesc').textContent = d.desc;
-  document.getElementById('infoFacts').innerHTML = d.facts.map(f =>
-    '<div class="info-fact"><span class="info-fact-label">' + f.label + '</span><span class="info-fact-val">' + f.val + '</span></div>'
-  ).join('');
-  
-  // Build photo slider
-  const slider = document.getElementById('photoSlider');
-  slider.innerHTML = d.photos.map((p, i) =>
-    '<img src="' + p + '" class="slide-img' + (i === 0 ? ' active' : '') + '" alt="' + d.title + '" onerror="this.style.display='none'">'
-  ).join('');
-  
-  // Build dots
-  const dots = document.getElementById('sliderDots');
-  dots.innerHTML = d.photos.map((_, i) =>
-    '<span class="dot' + (i === 0 ? ' active' : '') + '" onclick="goToSlide(' + i + ')"></span>'
-  ).join('');
-  
-  // Set YouTube video
-  document.getElementById('infoVideo').src = 'https://www.youtube.com/embed/' + d.video + '?rel=0';
-  
-  document.getElementById('infoModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function goToSlide(n) {
-  if (!currentPlace) return;
-  const imgs = document.querySelectorAll('.slide-img');
-  const dots = document.querySelectorAll('.dot');
-  imgs.forEach(img => img.classList.remove('active'));
-  dots.forEach(dot => dot.classList.remove('active'));
-  currentSlide = (n + currentPlace.photos.length) % currentPlace.photos.length;
-  if (imgs[currentSlide]) imgs[currentSlide].classList.add('active');
-  if (dots[currentSlide]) dots[currentSlide].classList.add('active');
-}
-
-function nextSlide() { goToSlide(currentSlide + 1); }
-function prevSlide() { goToSlide(currentSlide - 1); }
-
-function closeInfo() {
-  document.getElementById('infoModal').classList.remove('open');
-  document.getElementById('infoVideo').src = '';
-  document.body.style.overflow = '';
-}
-}
-
-// Load reviews on start
-renderApprovedReviews();
-
-// Animations simplified for Safari compatibility
 </script>
 
 </body>
